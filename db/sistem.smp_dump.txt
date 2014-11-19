@@ -1,0 +1,19 @@
+
+State Machine - |sistem|cunit:cu|SM1:statemachine|fstate
+Name fstate.S1_1 fstate.S14 fstate.S13 fstate.S12 fstate.S11 fstate.S10 fstate.S9 fstate.S8 fstate.S7 fstate.S6 fstate.S5 fstate.S4 fstate.S3 fstate.S2 fstate.S1 fstate.idle 
+fstate.idle 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+fstate.S1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+fstate.S2 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+fstate.S3 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+fstate.S4 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+fstate.S5 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+fstate.S6 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+fstate.S7 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+fstate.S8 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+fstate.S9 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+fstate.S10 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+fstate.S11 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+fstate.S12 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+fstate.S13 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+fstate.S14 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+fstate.S1_1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 

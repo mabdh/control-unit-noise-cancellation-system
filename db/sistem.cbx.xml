@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="sistem">
+		<CBX_INST_ENTRY INSTANCE_NAME="|sistem|fifo2Im:f2i|scfifo:scfifo_component" CBX_FILE_NAME="scfifo_ns31.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sistem|fifo1a:f1a|scfifo:scfifo_component" CBX_FILE_NAME="scfifo_ls31.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sistem|fifo1b:f1b|scfifo:scfifo_component" CBX_FILE_NAME="scfifo_ls31.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sistem|fifo3Im:f3im|scfifo:scfifo_component" CBX_FILE_NAME="scfifo_ls31.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sistem|fifo3Re:f3re|scfifo:scfifo_component" CBX_FILE_NAME="scfifo_ns31.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sistem|fifo4a:ff4a|scfifo:scfifo_component" CBX_FILE_NAME="scfifo_3r31.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sistem|fifo4b:ff4b|scfifo:scfifo_component" CBX_FILE_NAME="scfifo_3r31.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sistem|fifo5:ff5|scfifo:scfifo_component" CBX_FILE_NAME="scfifo_3r31.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sistem|fifo2Re:f2r|scfifo:scfifo_component" CBX_FILE_NAME="scfifo_ns31.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

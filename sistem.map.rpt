@@ -1,0 +1,1145 @@
+Analysis & Synthesis report for sistem
+Sat Dec 29 12:59:09 2012
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. Analysis & Synthesis RAM Summary
+  8. State Machine - |sistem|cunit:cu|SM1:statemachine|fstate
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Source assignments for fifo1a:f1a|scfifo:scfifo_component|scfifo_ls31:auto_generated|a_dpfifo_s241:dpfifo|dpram_cv01:FIFOram|altsyncram_6vj1:altsyncram2
+ 13. Source assignments for fifo1b:f1b|scfifo:scfifo_component|scfifo_ls31:auto_generated|a_dpfifo_s241:dpfifo|dpram_cv01:FIFOram|altsyncram_6vj1:altsyncram2
+ 14. Source assignments for fifo3Re:f3re|scfifo:scfifo_component|scfifo_ns31:auto_generated|a_dpfifo_u241:dpfifo|dpram_ev01:FIFOram|altsyncram_7vj1:altsyncram1
+ 15. Source assignments for fifo3Im:f3im|scfifo:scfifo_component|scfifo_ls31:auto_generated|a_dpfifo_s241:dpfifo|dpram_cv01:FIFOram|altsyncram_6vj1:altsyncram2
+ 16. Source assignments for fifo2Re:f2r|scfifo:scfifo_component|scfifo_ns31:auto_generated|a_dpfifo_u241:dpfifo|dpram_ev01:FIFOram|altsyncram_7vj1:altsyncram1
+ 17. Source assignments for fifo2Im:f2i|scfifo:scfifo_component|scfifo_ns31:auto_generated|a_dpfifo_u241:dpfifo|dpram_ev01:FIFOram|altsyncram_7vj1:altsyncram1
+ 18. Source assignments for fifo4a:ff4a|scfifo:scfifo_component|scfifo_3r31:auto_generated|a_dpfifo_a141:dpfifo|dpram_bv01:FIFOram|altsyncram_4vj1:altsyncram2
+ 19. Source assignments for fifo4b:ff4b|scfifo:scfifo_component|scfifo_3r31:auto_generated|a_dpfifo_a141:dpfifo|dpram_bv01:FIFOram|altsyncram_4vj1:altsyncram2
+ 20. Source assignments for fifo5:ff5|scfifo:scfifo_component|scfifo_3r31:auto_generated|a_dpfifo_a141:dpfifo|dpram_bv01:FIFOram|altsyncram_4vj1:altsyncram2
+ 21. Parameter Settings for User Entity Instance: fifo1a:f1a|scfifo:scfifo_component
+ 22. Parameter Settings for User Entity Instance: fifo1b:f1b|scfifo:scfifo_component
+ 23. Parameter Settings for User Entity Instance: fifo3Re:f3re|scfifo:scfifo_component
+ 24. Parameter Settings for User Entity Instance: fifo3Im:f3im|scfifo:scfifo_component
+ 25. Parameter Settings for User Entity Instance: fifo2Re:f2r|scfifo:scfifo_component
+ 26. Parameter Settings for User Entity Instance: fifo2Im:f2i|scfifo:scfifo_component
+ 27. Parameter Settings for User Entity Instance: fifo4a:ff4a|scfifo:scfifo_component
+ 28. Parameter Settings for User Entity Instance: fifo4b:ff4b|scfifo:scfifo_component
+ 29. Parameter Settings for User Entity Instance: fifo5:ff5|scfifo:scfifo_component
+ 30. Parameter Settings for User Entity Instance: cunit:cu|SM1:statemachine
+ 31. scfifo Parameter Settings by Entity Instance
+ 32. Port Connectivity Checks: "fifo4b:ff4b"
+ 33. Port Connectivity Checks: "demuxFIFO:dmff"
+ 34. Port Connectivity Checks: "demuxFFT:dmfft"
+ 35. Port Connectivity Checks: "fifo2Im:f2i"
+ 36. Port Connectivity Checks: "fifo3Im:f3im"
+ 37. Port Connectivity Checks: "fifo1b:f1b"
+ 38. Analysis & Synthesis Messages
+ 39. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++------------------------------------+------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sat Dec 29 12:59:08 2012    ;
+; Quartus II Version                 ; 9.0 Build 132 02/25/2009 SJ Full Version ;
+; Revision Name                      ; sistem                                   ;
+; Top-level Entity Name              ; sistem                                   ;
+; Family                             ; Cyclone II                               ;
+; Total logic elements               ; 393                                      ;
+;     Total combinational functions  ; 393                                      ;
+;     Dedicated logic registers      ; 220                                      ;
+; Total registers                    ; 220                                      ;
+; Total pins                         ; 428                                      ;
+; Total virtual pins                 ; 0                                        ;
+; Total memory bits                  ; 22,528                                   ;
+; Embedded Multiplier 9-bit elements ; 0                                        ;
+; Total PLLs                         ; 0                                        ;
++------------------------------------+------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                            ;
++----------------------------------------------------------------+--------------------+--------------------+
+; Option                                                         ; Setting            ; Default Value      ;
++----------------------------------------------------------------+--------------------+--------------------+
+; Device                                                         ; EP2C70F896C6       ;                    ;
+; Top-level entity name                                          ; sistem             ; sistem             ;
+; Family name                                                    ; Cyclone II         ; Stratix II         ;
+; Maximum processors allowed for parallel compilation            ; All                ;                    ;
+; Use Generated Physical Constraints File                        ; Off                ;                    ;
+; Use smart compilation                                          ; Off                ; Off                ;
+; Restructure Multiplexers                                       ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                            ; Off                ; Off                ;
+; Preserve fewer node names                                      ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                      ; Off                ; Off                ;
+; Verilog Version                                                ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                   ; VHDL93             ; VHDL93             ;
+; State Machine Processing                                       ; Auto               ; Auto               ;
+; Safe State Machine                                             ; Off                ; Off                ;
+; Extract Verilog State Machines                                 ; On                 ; On                 ;
+; Extract VHDL State Machines                                    ; On                 ; On                 ;
+; Ignore Verilog initial constructs                              ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                     ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                 ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                        ; On                 ; On                 ;
+; Parallel Synthesis                                             ; Off                ; Off                ;
+; DSP Block Balancing                                            ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                             ; On                 ; On                 ;
+; Power-Up Don't Care                                            ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                   ; Off                ; Off                ;
+; Remove Duplicate Registers                                     ; On                 ; On                 ;
+; Ignore CARRY Buffers                                           ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                         ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                          ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                      ; Off                ; Off                ;
+; Ignore LCELL Buffers                                           ; Off                ; Off                ;
+; Ignore SOFT Buffers                                            ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                 ; Off                ; Off                ;
+; Optimization Technique                                         ; Balanced           ; Balanced           ;
+; Carry Chain Length                                             ; 70                 ; 70                 ;
+; Auto Carry Chains                                              ; On                 ; On                 ;
+; Auto Open-Drain Pins                                           ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                          ; Off                ; Off                ;
+; Auto ROM Replacement                                           ; On                 ; On                 ;
+; Auto RAM Replacement                                           ; On                 ; On                 ;
+; Auto Shift Register Replacement                                ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                  ; On                 ; On                 ;
+; Strict RAM Replacement                                         ; Off                ; Off                ;
+; Allow Synchronous Control Signals                              ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                         ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                              ; Off                ; Off                ;
+; Auto Resource Sharing                                          ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                             ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                             ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                  ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing            ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives              ; Off                ; Off                ;
+; Timing-Driven Synthesis                                        ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report             ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                             ; Off                ; Off                ;
+; Synchronization Register Chain Length                          ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                   ; Normal compilation ; Normal compilation ;
+; HDL message level                                              ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report       ; 100                ; 100                ;
+; Number of Inverted Registers Reported in Synthesis Report      ; 100                ; 100                ;
+; Clock MUX Protection                                           ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                    ; Off                ; Off                ;
+; Block Design Naming                                            ; Auto               ; Auto               ;
+; SDC constraint protection                                      ; Off                ; Off                ;
+; Synthesis Effort                                               ; Auto               ; Auto               ;
+; Allows Asynchronous Clear Usage For Shift Register Replacement ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                             ; Medium             ; Medium             ;
++----------------------------------------------------------------+--------------------+--------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                      ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                            ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+; counter2Re.v                     ; yes             ; User Verilog HDL File        ; C:/Documents and Settings/abduh/My Documents/quartus_project/Copy of STATE MACHINE SEDANG DI CEK/counter2Re.v           ;
+; SM1.v                            ; yes             ; User Verilog HDL File        ; C:/Documents and Settings/abduh/My Documents/quartus_project/Copy of STATE MACHINE SEDANG DI CEK/SM1.v                  ;
+; fifo2Im.v                        ; yes             ; User Wizard-Generated File   ; C:/Documents and Settings/abduh/My Documents/quartus_project/Copy of STATE MACHINE SEDANG DI CEK/fifo2Im.v              ;
+; fifo1a.v                         ; yes             ; User Wizard-Generated File   ; C:/Documents and Settings/abduh/My Documents/quartus_project/Copy of STATE MACHINE SEDANG DI CEK/fifo1a.v               ;
+; fifo1b.v                         ; yes             ; User Wizard-Generated File   ; C:/Documents and Settings/abduh/My Documents/quartus_project/Copy of STATE MACHINE SEDANG DI CEK/fifo1b.v               ;
+; half_overlap.v                   ; yes             ; User Verilog HDL File        ; C:/Documents and Settings/abduh/My Documents/quartus_project/Copy of STATE MACHINE SEDANG DI CEK/half_overlap.v         ;
+; cunit.v                          ; yes             ; User Verilog HDL File        ; C:/Documents and Settings/abduh/My Documents/quartus_project/Copy of STATE MACHINE SEDANG DI CEK/cunit.v                ;
+; demuxFFT.v                       ; yes             ; User Verilog HDL File        ; C:/Documents and Settings/abduh/My Documents/quartus_project/Copy of STATE MACHINE SEDANG DI CEK/demuxFFT.v             ;
+; demuxFIFO.v                      ; yes             ; User Verilog HDL File        ; C:/Documents and Settings/abduh/My Documents/quartus_project/Copy of STATE MACHINE SEDANG DI CEK/demuxFIFO.v            ;
+; muxFIFO.v                        ; yes             ; User Verilog HDL File        ; C:/Documents and Settings/abduh/My Documents/quartus_project/Copy of STATE MACHINE SEDANG DI CEK/muxFIFO.v              ;
+; muxpreFFT.v                      ; yes             ; User Verilog HDL File        ; C:/Documents and Settings/abduh/My Documents/quartus_project/Copy of STATE MACHINE SEDANG DI CEK/muxpreFFT.v            ;
+; sistem.v                         ; yes             ; User Verilog HDL File        ; C:/Documents and Settings/abduh/My Documents/quartus_project/Copy of STATE MACHINE SEDANG DI CEK/sistem.v               ;
+; fifo2Re.v                        ; yes             ; User Wizard-Generated File   ; C:/Documents and Settings/abduh/My Documents/quartus_project/Copy of STATE MACHINE SEDANG DI CEK/fifo2Re.v              ;
+; fifo3Im.v                        ; yes             ; User Wizard-Generated File   ; C:/Documents and Settings/abduh/My Documents/quartus_project/Copy of STATE MACHINE SEDANG DI CEK/fifo3Im.v              ;
+; fifo3Re.v                        ; yes             ; User Wizard-Generated File   ; C:/Documents and Settings/abduh/My Documents/quartus_project/Copy of STATE MACHINE SEDANG DI CEK/fifo3Re.v              ;
+; fifo4a.v                         ; yes             ; User Wizard-Generated File   ; C:/Documents and Settings/abduh/My Documents/quartus_project/Copy of STATE MACHINE SEDANG DI CEK/fifo4a.v               ;
+; fifo4b.v                         ; yes             ; User Wizard-Generated File   ; C:/Documents and Settings/abduh/My Documents/quartus_project/Copy of STATE MACHINE SEDANG DI CEK/fifo4b.v               ;
+; fifo5.v                          ; yes             ; User Wizard-Generated File   ; C:/Documents and Settings/abduh/My Documents/quartus_project/Copy of STATE MACHINE SEDANG DI CEK/fifo5.v                ;
+; mult256.v                        ; yes             ; User Verilog HDL File        ; C:/Documents and Settings/abduh/My Documents/quartus_project/Copy of STATE MACHINE SEDANG DI CEK/mult256.v              ;
+; scfifo.tdf                       ; yes             ; Megafunction                 ; c:/altera/90/quartus/libraries/megafunctions/scfifo.tdf                                                                 ;
+; a_regfifo.inc                    ; yes             ; Megafunction                 ; c:/altera/90/quartus/libraries/megafunctions/a_regfifo.inc                                                              ;
+; a_dpfifo.inc                     ; yes             ; Megafunction                 ; c:/altera/90/quartus/libraries/megafunctions/a_dpfifo.inc                                                               ;
+; a_i2fifo.inc                     ; yes             ; Megafunction                 ; c:/altera/90/quartus/libraries/megafunctions/a_i2fifo.inc                                                               ;
+; a_fffifo.inc                     ; yes             ; Megafunction                 ; c:/altera/90/quartus/libraries/megafunctions/a_fffifo.inc                                                               ;
+; a_f2fifo.inc                     ; yes             ; Megafunction                 ; c:/altera/90/quartus/libraries/megafunctions/a_f2fifo.inc                                                               ;
+; aglobal90.inc                    ; yes             ; Megafunction                 ; c:/altera/90/quartus/libraries/megafunctions/aglobal90.inc                                                              ;
+; db/scfifo_ls31.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Documents and Settings/abduh/My Documents/quartus_project/Copy of STATE MACHINE SEDANG DI CEK/db/scfifo_ls31.tdf     ;
+; db/a_dpfifo_s241.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Documents and Settings/abduh/My Documents/quartus_project/Copy of STATE MACHINE SEDANG DI CEK/db/a_dpfifo_s241.tdf   ;
+; db/a_fefifo_t7f.tdf              ; yes             ; Auto-Generated Megafunction  ; C:/Documents and Settings/abduh/My Documents/quartus_project/Copy of STATE MACHINE SEDANG DI CEK/db/a_fefifo_t7f.tdf    ;
+; db/cntr_sj7.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Documents and Settings/abduh/My Documents/quartus_project/Copy of STATE MACHINE SEDANG DI CEK/db/cntr_sj7.tdf        ;
+; db/dpram_cv01.tdf                ; yes             ; Auto-Generated Megafunction  ; C:/Documents and Settings/abduh/My Documents/quartus_project/Copy of STATE MACHINE SEDANG DI CEK/db/dpram_cv01.tdf      ;
+; db/altsyncram_6vj1.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Documents and Settings/abduh/My Documents/quartus_project/Copy of STATE MACHINE SEDANG DI CEK/db/altsyncram_6vj1.tdf ;
+; db/cntr_gjb.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Documents and Settings/abduh/My Documents/quartus_project/Copy of STATE MACHINE SEDANG DI CEK/db/cntr_gjb.tdf        ;
+; db/scfifo_ns31.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Documents and Settings/abduh/My Documents/quartus_project/Copy of STATE MACHINE SEDANG DI CEK/db/scfifo_ns31.tdf     ;
+; db/a_dpfifo_u241.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Documents and Settings/abduh/My Documents/quartus_project/Copy of STATE MACHINE SEDANG DI CEK/db/a_dpfifo_u241.tdf   ;
+; db/dpram_ev01.tdf                ; yes             ; Auto-Generated Megafunction  ; C:/Documents and Settings/abduh/My Documents/quartus_project/Copy of STATE MACHINE SEDANG DI CEK/db/dpram_ev01.tdf      ;
+; db/altsyncram_7vj1.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Documents and Settings/abduh/My Documents/quartus_project/Copy of STATE MACHINE SEDANG DI CEK/db/altsyncram_7vj1.tdf ;
+; db/scfifo_3r31.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Documents and Settings/abduh/My Documents/quartus_project/Copy of STATE MACHINE SEDANG DI CEK/db/scfifo_3r31.tdf     ;
+; db/a_dpfifo_a141.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Documents and Settings/abduh/My Documents/quartus_project/Copy of STATE MACHINE SEDANG DI CEK/db/a_dpfifo_a141.tdf   ;
+; db/a_fefifo_b6f.tdf              ; yes             ; Auto-Generated Megafunction  ; C:/Documents and Settings/abduh/My Documents/quartus_project/Copy of STATE MACHINE SEDANG DI CEK/db/a_fefifo_b6f.tdf    ;
+; db/cntr_rj7.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Documents and Settings/abduh/My Documents/quartus_project/Copy of STATE MACHINE SEDANG DI CEK/db/cntr_rj7.tdf        ;
+; db/dpram_bv01.tdf                ; yes             ; Auto-Generated Megafunction  ; C:/Documents and Settings/abduh/My Documents/quartus_project/Copy of STATE MACHINE SEDANG DI CEK/db/dpram_bv01.tdf      ;
+; db/altsyncram_4vj1.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Documents and Settings/abduh/My Documents/quartus_project/Copy of STATE MACHINE SEDANG DI CEK/db/altsyncram_4vj1.tdf ;
+; db/cntr_fjb.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Documents and Settings/abduh/My Documents/quartus_project/Copy of STATE MACHINE SEDANG DI CEK/db/cntr_fjb.tdf        ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 393   ;
+;                                             ;       ;
+; Total combinational functions               ; 393   ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 117   ;
+;     -- 3 input functions                    ; 113   ;
+;     -- <=2 input functions                  ; 163   ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 219   ;
+;     -- arithmetic mode                      ; 174   ;
+;                                             ;       ;
+; Total registers                             ; 220   ;
+;     -- Dedicated logic registers            ; 220   ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 428   ;
+; Total memory bits                           ; 22528 ;
+; Maximum fan-out node                        ; clock ;
+; Maximum fan-out                             ; 444   ;
+; Total fan-out                               ; 6141  ;
+; Average fan-out                             ; 4.85  ;
++---------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                      ;
++-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                         ; Library Name ;
++-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |sistem                                         ; 393 (1)           ; 220 (0)      ; 22528       ; 0            ; 0       ; 0         ; 428  ; 0            ; |sistem                                                                                                                                     ; work         ;
+;    |counter2Re:c2Re|                            ; 9 (9)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|counter2Re:c2Re                                                                                                                     ; work         ;
+;    |cunit:cu|                                   ; 38 (8)            ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|cunit:cu                                                                                                                            ; work         ;
+;       |SM1:statemachine|                        ; 30 (30)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|cunit:cu|SM1:statemachine                                                                                                           ; work         ;
+;    |fifo1a:f1a|                                 ; 29 (0)            ; 23 (0)       ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo1a:f1a                                                                                                                          ; work         ;
+;       |scfifo:scfifo_component|                 ; 29 (0)            ; 23 (0)       ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo1a:f1a|scfifo:scfifo_component                                                                                                  ; work         ;
+;          |scfifo_ls31:auto_generated|           ; 29 (0)            ; 23 (0)       ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo1a:f1a|scfifo:scfifo_component|scfifo_ls31:auto_generated                                                                       ; work         ;
+;             |a_dpfifo_s241:dpfifo|              ; 29 (0)            ; 23 (0)       ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo1a:f1a|scfifo:scfifo_component|scfifo_ls31:auto_generated|a_dpfifo_s241:dpfifo                                                  ; work         ;
+;                |a_fefifo_t7f:fifo_state|        ; 15 (8)            ; 9 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo1a:f1a|scfifo:scfifo_component|scfifo_ls31:auto_generated|a_dpfifo_s241:dpfifo|a_fefifo_t7f:fifo_state                          ; work         ;
+;                   |cntr_sj7:count_usedw|        ; 7 (7)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo1a:f1a|scfifo:scfifo_component|scfifo_ls31:auto_generated|a_dpfifo_s241:dpfifo|a_fefifo_t7f:fifo_state|cntr_sj7:count_usedw     ; work         ;
+;                |cntr_gjb:rd_ptr_count|          ; 7 (7)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo1a:f1a|scfifo:scfifo_component|scfifo_ls31:auto_generated|a_dpfifo_s241:dpfifo|cntr_gjb:rd_ptr_count                            ; work         ;
+;                |cntr_gjb:wr_ptr|                ; 7 (7)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo1a:f1a|scfifo:scfifo_component|scfifo_ls31:auto_generated|a_dpfifo_s241:dpfifo|cntr_gjb:wr_ptr                                  ; work         ;
+;                |dpram_cv01:FIFOram|             ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo1a:f1a|scfifo:scfifo_component|scfifo_ls31:auto_generated|a_dpfifo_s241:dpfifo|dpram_cv01:FIFOram                               ; work         ;
+;                   |altsyncram_6vj1:altsyncram2| ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo1a:f1a|scfifo:scfifo_component|scfifo_ls31:auto_generated|a_dpfifo_s241:dpfifo|dpram_cv01:FIFOram|altsyncram_6vj1:altsyncram2   ; work         ;
+;    |fifo1b:f1b|                                 ; 33 (0)            ; 23 (0)       ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo1b:f1b                                                                                                                          ; work         ;
+;       |scfifo:scfifo_component|                 ; 33 (0)            ; 23 (0)       ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo1b:f1b|scfifo:scfifo_component                                                                                                  ; work         ;
+;          |scfifo_ls31:auto_generated|           ; 33 (0)            ; 23 (0)       ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo1b:f1b|scfifo:scfifo_component|scfifo_ls31:auto_generated                                                                       ; work         ;
+;             |a_dpfifo_s241:dpfifo|              ; 33 (0)            ; 23 (0)       ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo1b:f1b|scfifo:scfifo_component|scfifo_ls31:auto_generated|a_dpfifo_s241:dpfifo                                                  ; work         ;
+;                |a_fefifo_t7f:fifo_state|        ; 19 (12)           ; 9 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo1b:f1b|scfifo:scfifo_component|scfifo_ls31:auto_generated|a_dpfifo_s241:dpfifo|a_fefifo_t7f:fifo_state                          ; work         ;
+;                   |cntr_sj7:count_usedw|        ; 7 (7)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo1b:f1b|scfifo:scfifo_component|scfifo_ls31:auto_generated|a_dpfifo_s241:dpfifo|a_fefifo_t7f:fifo_state|cntr_sj7:count_usedw     ; work         ;
+;                |cntr_gjb:rd_ptr_count|          ; 7 (7)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo1b:f1b|scfifo:scfifo_component|scfifo_ls31:auto_generated|a_dpfifo_s241:dpfifo|cntr_gjb:rd_ptr_count                            ; work         ;
+;                |cntr_gjb:wr_ptr|                ; 7 (7)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo1b:f1b|scfifo:scfifo_component|scfifo_ls31:auto_generated|a_dpfifo_s241:dpfifo|cntr_gjb:wr_ptr                                  ; work         ;
+;                |dpram_cv01:FIFOram|             ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo1b:f1b|scfifo:scfifo_component|scfifo_ls31:auto_generated|a_dpfifo_s241:dpfifo|dpram_cv01:FIFOram                               ; work         ;
+;                   |altsyncram_6vj1:altsyncram2| ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo1b:f1b|scfifo:scfifo_component|scfifo_ls31:auto_generated|a_dpfifo_s241:dpfifo|dpram_cv01:FIFOram|altsyncram_6vj1:altsyncram2   ; work         ;
+;    |fifo2Im:f2i|                                ; 32 (0)            ; 23 (0)       ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo2Im:f2i                                                                                                                         ; work         ;
+;       |scfifo:scfifo_component|                 ; 32 (0)            ; 23 (0)       ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo2Im:f2i|scfifo:scfifo_component                                                                                                 ; work         ;
+;          |scfifo_ns31:auto_generated|           ; 32 (0)            ; 23 (0)       ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo2Im:f2i|scfifo:scfifo_component|scfifo_ns31:auto_generated                                                                      ; work         ;
+;             |a_dpfifo_u241:dpfifo|              ; 32 (0)            ; 23 (0)       ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo2Im:f2i|scfifo:scfifo_component|scfifo_ns31:auto_generated|a_dpfifo_u241:dpfifo                                                 ; work         ;
+;                |a_fefifo_t7f:fifo_state|        ; 18 (11)           ; 9 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo2Im:f2i|scfifo:scfifo_component|scfifo_ns31:auto_generated|a_dpfifo_u241:dpfifo|a_fefifo_t7f:fifo_state                         ; work         ;
+;                   |cntr_sj7:count_usedw|        ; 7 (7)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo2Im:f2i|scfifo:scfifo_component|scfifo_ns31:auto_generated|a_dpfifo_u241:dpfifo|a_fefifo_t7f:fifo_state|cntr_sj7:count_usedw    ; work         ;
+;                |cntr_gjb:rd_ptr_count|          ; 7 (7)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo2Im:f2i|scfifo:scfifo_component|scfifo_ns31:auto_generated|a_dpfifo_u241:dpfifo|cntr_gjb:rd_ptr_count                           ; work         ;
+;                |cntr_gjb:wr_ptr|                ; 7 (7)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo2Im:f2i|scfifo:scfifo_component|scfifo_ns31:auto_generated|a_dpfifo_u241:dpfifo|cntr_gjb:wr_ptr                                 ; work         ;
+;                |dpram_ev01:FIFOram|             ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo2Im:f2i|scfifo:scfifo_component|scfifo_ns31:auto_generated|a_dpfifo_u241:dpfifo|dpram_ev01:FIFOram                              ; work         ;
+;                   |altsyncram_7vj1:altsyncram1| ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo2Im:f2i|scfifo:scfifo_component|scfifo_ns31:auto_generated|a_dpfifo_u241:dpfifo|dpram_ev01:FIFOram|altsyncram_7vj1:altsyncram1  ; work         ;
+;    |fifo2Re:f2r|                                ; 30 (0)            ; 23 (0)       ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo2Re:f2r                                                                                                                         ; work         ;
+;       |scfifo:scfifo_component|                 ; 30 (0)            ; 23 (0)       ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo2Re:f2r|scfifo:scfifo_component                                                                                                 ; work         ;
+;          |scfifo_ns31:auto_generated|           ; 30 (0)            ; 23 (0)       ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo2Re:f2r|scfifo:scfifo_component|scfifo_ns31:auto_generated                                                                      ; work         ;
+;             |a_dpfifo_u241:dpfifo|              ; 30 (2)            ; 23 (0)       ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo2Re:f2r|scfifo:scfifo_component|scfifo_ns31:auto_generated|a_dpfifo_u241:dpfifo                                                 ; work         ;
+;                |a_fefifo_t7f:fifo_state|        ; 14 (7)            ; 9 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo2Re:f2r|scfifo:scfifo_component|scfifo_ns31:auto_generated|a_dpfifo_u241:dpfifo|a_fefifo_t7f:fifo_state                         ; work         ;
+;                   |cntr_sj7:count_usedw|        ; 7 (7)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo2Re:f2r|scfifo:scfifo_component|scfifo_ns31:auto_generated|a_dpfifo_u241:dpfifo|a_fefifo_t7f:fifo_state|cntr_sj7:count_usedw    ; work         ;
+;                |cntr_gjb:rd_ptr_count|          ; 7 (7)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo2Re:f2r|scfifo:scfifo_component|scfifo_ns31:auto_generated|a_dpfifo_u241:dpfifo|cntr_gjb:rd_ptr_count                           ; work         ;
+;                |cntr_gjb:wr_ptr|                ; 7 (7)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo2Re:f2r|scfifo:scfifo_component|scfifo_ns31:auto_generated|a_dpfifo_u241:dpfifo|cntr_gjb:wr_ptr                                 ; work         ;
+;                |dpram_ev01:FIFOram|             ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo2Re:f2r|scfifo:scfifo_component|scfifo_ns31:auto_generated|a_dpfifo_u241:dpfifo|dpram_ev01:FIFOram                              ; work         ;
+;                   |altsyncram_7vj1:altsyncram1| ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo2Re:f2r|scfifo:scfifo_component|scfifo_ns31:auto_generated|a_dpfifo_u241:dpfifo|dpram_ev01:FIFOram|altsyncram_7vj1:altsyncram1  ; work         ;
+;    |fifo3Im:f3im|                               ; 32 (0)            ; 23 (0)       ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo3Im:f3im                                                                                                                        ; work         ;
+;       |scfifo:scfifo_component|                 ; 32 (0)            ; 23 (0)       ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo3Im:f3im|scfifo:scfifo_component                                                                                                ; work         ;
+;          |scfifo_ls31:auto_generated|           ; 32 (0)            ; 23 (0)       ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo3Im:f3im|scfifo:scfifo_component|scfifo_ls31:auto_generated                                                                     ; work         ;
+;             |a_dpfifo_s241:dpfifo|              ; 32 (0)            ; 23 (0)       ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo3Im:f3im|scfifo:scfifo_component|scfifo_ls31:auto_generated|a_dpfifo_s241:dpfifo                                                ; work         ;
+;                |a_fefifo_t7f:fifo_state|        ; 18 (11)           ; 9 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo3Im:f3im|scfifo:scfifo_component|scfifo_ls31:auto_generated|a_dpfifo_s241:dpfifo|a_fefifo_t7f:fifo_state                        ; work         ;
+;                   |cntr_sj7:count_usedw|        ; 7 (7)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo3Im:f3im|scfifo:scfifo_component|scfifo_ls31:auto_generated|a_dpfifo_s241:dpfifo|a_fefifo_t7f:fifo_state|cntr_sj7:count_usedw   ; work         ;
+;                |cntr_gjb:rd_ptr_count|          ; 7 (7)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo3Im:f3im|scfifo:scfifo_component|scfifo_ls31:auto_generated|a_dpfifo_s241:dpfifo|cntr_gjb:rd_ptr_count                          ; work         ;
+;                |cntr_gjb:wr_ptr|                ; 7 (7)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo3Im:f3im|scfifo:scfifo_component|scfifo_ls31:auto_generated|a_dpfifo_s241:dpfifo|cntr_gjb:wr_ptr                                ; work         ;
+;                |dpram_cv01:FIFOram|             ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo3Im:f3im|scfifo:scfifo_component|scfifo_ls31:auto_generated|a_dpfifo_s241:dpfifo|dpram_cv01:FIFOram                             ; work         ;
+;                   |altsyncram_6vj1:altsyncram2| ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo3Im:f3im|scfifo:scfifo_component|scfifo_ls31:auto_generated|a_dpfifo_s241:dpfifo|dpram_cv01:FIFOram|altsyncram_6vj1:altsyncram2 ; work         ;
+;    |fifo3Re:f3re|                               ; 29 (0)            ; 23 (0)       ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo3Re:f3re                                                                                                                        ; work         ;
+;       |scfifo:scfifo_component|                 ; 29 (0)            ; 23 (0)       ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo3Re:f3re|scfifo:scfifo_component                                                                                                ; work         ;
+;          |scfifo_ns31:auto_generated|           ; 29 (0)            ; 23 (0)       ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo3Re:f3re|scfifo:scfifo_component|scfifo_ns31:auto_generated                                                                     ; work         ;
+;             |a_dpfifo_u241:dpfifo|              ; 29 (0)            ; 23 (0)       ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo3Re:f3re|scfifo:scfifo_component|scfifo_ns31:auto_generated|a_dpfifo_u241:dpfifo                                                ; work         ;
+;                |a_fefifo_t7f:fifo_state|        ; 15 (8)            ; 9 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo3Re:f3re|scfifo:scfifo_component|scfifo_ns31:auto_generated|a_dpfifo_u241:dpfifo|a_fefifo_t7f:fifo_state                        ; work         ;
+;                   |cntr_sj7:count_usedw|        ; 7 (7)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo3Re:f3re|scfifo:scfifo_component|scfifo_ns31:auto_generated|a_dpfifo_u241:dpfifo|a_fefifo_t7f:fifo_state|cntr_sj7:count_usedw   ; work         ;
+;                |cntr_gjb:rd_ptr_count|          ; 7 (7)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo3Re:f3re|scfifo:scfifo_component|scfifo_ns31:auto_generated|a_dpfifo_u241:dpfifo|cntr_gjb:rd_ptr_count                          ; work         ;
+;                |cntr_gjb:wr_ptr|                ; 7 (7)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo3Re:f3re|scfifo:scfifo_component|scfifo_ns31:auto_generated|a_dpfifo_u241:dpfifo|cntr_gjb:wr_ptr                                ; work         ;
+;                |dpram_ev01:FIFOram|             ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo3Re:f3re|scfifo:scfifo_component|scfifo_ns31:auto_generated|a_dpfifo_u241:dpfifo|dpram_ev01:FIFOram                             ; work         ;
+;                   |altsyncram_7vj1:altsyncram1| ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo3Re:f3re|scfifo:scfifo_component|scfifo_ns31:auto_generated|a_dpfifo_u241:dpfifo|dpram_ev01:FIFOram|altsyncram_7vj1:altsyncram1 ; work         ;
+;    |fifo4a:ff4a|                                ; 26 (0)            ; 20 (0)       ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo4a:ff4a                                                                                                                         ; work         ;
+;       |scfifo:scfifo_component|                 ; 26 (0)            ; 20 (0)       ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo4a:ff4a|scfifo:scfifo_component                                                                                                 ; work         ;
+;          |scfifo_3r31:auto_generated|           ; 26 (0)            ; 20 (0)       ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo4a:ff4a|scfifo:scfifo_component|scfifo_3r31:auto_generated                                                                      ; work         ;
+;             |a_dpfifo_a141:dpfifo|              ; 26 (1)            ; 20 (0)       ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo4a:ff4a|scfifo:scfifo_component|scfifo_3r31:auto_generated|a_dpfifo_a141:dpfifo                                                 ; work         ;
+;                |a_fefifo_b6f:fifo_state|        ; 13 (7)            ; 8 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo4a:ff4a|scfifo:scfifo_component|scfifo_3r31:auto_generated|a_dpfifo_a141:dpfifo|a_fefifo_b6f:fifo_state                         ; work         ;
+;                   |cntr_rj7:count_usedw|        ; 6 (6)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo4a:ff4a|scfifo:scfifo_component|scfifo_3r31:auto_generated|a_dpfifo_a141:dpfifo|a_fefifo_b6f:fifo_state|cntr_rj7:count_usedw    ; work         ;
+;                |cntr_fjb:rd_ptr_count|          ; 6 (6)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo4a:ff4a|scfifo:scfifo_component|scfifo_3r31:auto_generated|a_dpfifo_a141:dpfifo|cntr_fjb:rd_ptr_count                           ; work         ;
+;                |cntr_fjb:wr_ptr|                ; 6 (6)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo4a:ff4a|scfifo:scfifo_component|scfifo_3r31:auto_generated|a_dpfifo_a141:dpfifo|cntr_fjb:wr_ptr                                 ; work         ;
+;                |dpram_bv01:FIFOram|             ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo4a:ff4a|scfifo:scfifo_component|scfifo_3r31:auto_generated|a_dpfifo_a141:dpfifo|dpram_bv01:FIFOram                              ; work         ;
+;                   |altsyncram_4vj1:altsyncram2| ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo4a:ff4a|scfifo:scfifo_component|scfifo_3r31:auto_generated|a_dpfifo_a141:dpfifo|dpram_bv01:FIFOram|altsyncram_4vj1:altsyncram2  ; work         ;
+;    |fifo4b:ff4b|                                ; 27 (0)            ; 20 (0)       ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo4b:ff4b                                                                                                                         ; work         ;
+;       |scfifo:scfifo_component|                 ; 27 (0)            ; 20 (0)       ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo4b:ff4b|scfifo:scfifo_component                                                                                                 ; work         ;
+;          |scfifo_3r31:auto_generated|           ; 27 (0)            ; 20 (0)       ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo4b:ff4b|scfifo:scfifo_component|scfifo_3r31:auto_generated                                                                      ; work         ;
+;             |a_dpfifo_a141:dpfifo|              ; 27 (1)            ; 20 (0)       ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo4b:ff4b|scfifo:scfifo_component|scfifo_3r31:auto_generated|a_dpfifo_a141:dpfifo                                                 ; work         ;
+;                |a_fefifo_b6f:fifo_state|        ; 14 (8)            ; 8 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo4b:ff4b|scfifo:scfifo_component|scfifo_3r31:auto_generated|a_dpfifo_a141:dpfifo|a_fefifo_b6f:fifo_state                         ; work         ;
+;                   |cntr_rj7:count_usedw|        ; 6 (6)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo4b:ff4b|scfifo:scfifo_component|scfifo_3r31:auto_generated|a_dpfifo_a141:dpfifo|a_fefifo_b6f:fifo_state|cntr_rj7:count_usedw    ; work         ;
+;                |cntr_fjb:rd_ptr_count|          ; 6 (6)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo4b:ff4b|scfifo:scfifo_component|scfifo_3r31:auto_generated|a_dpfifo_a141:dpfifo|cntr_fjb:rd_ptr_count                           ; work         ;
+;                |cntr_fjb:wr_ptr|                ; 6 (6)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo4b:ff4b|scfifo:scfifo_component|scfifo_3r31:auto_generated|a_dpfifo_a141:dpfifo|cntr_fjb:wr_ptr                                 ; work         ;
+;                |dpram_bv01:FIFOram|             ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo4b:ff4b|scfifo:scfifo_component|scfifo_3r31:auto_generated|a_dpfifo_a141:dpfifo|dpram_bv01:FIFOram                              ; work         ;
+;                   |altsyncram_4vj1:altsyncram2| ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo4b:ff4b|scfifo:scfifo_component|scfifo_3r31:auto_generated|a_dpfifo_a141:dpfifo|dpram_bv01:FIFOram|altsyncram_4vj1:altsyncram2  ; work         ;
+;    |fifo5:ff5|                                  ; 26 (0)            ; 20 (0)       ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo5:ff5                                                                                                                           ; work         ;
+;       |scfifo:scfifo_component|                 ; 26 (0)            ; 20 (0)       ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo5:ff5|scfifo:scfifo_component                                                                                                   ; work         ;
+;          |scfifo_3r31:auto_generated|           ; 26 (0)            ; 20 (0)       ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo5:ff5|scfifo:scfifo_component|scfifo_3r31:auto_generated                                                                        ; work         ;
+;             |a_dpfifo_a141:dpfifo|              ; 26 (1)            ; 20 (0)       ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo5:ff5|scfifo:scfifo_component|scfifo_3r31:auto_generated|a_dpfifo_a141:dpfifo                                                   ; work         ;
+;                |a_fefifo_b6f:fifo_state|        ; 13 (7)            ; 8 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo5:ff5|scfifo:scfifo_component|scfifo_3r31:auto_generated|a_dpfifo_a141:dpfifo|a_fefifo_b6f:fifo_state                           ; work         ;
+;                   |cntr_rj7:count_usedw|        ; 6 (6)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo5:ff5|scfifo:scfifo_component|scfifo_3r31:auto_generated|a_dpfifo_a141:dpfifo|a_fefifo_b6f:fifo_state|cntr_rj7:count_usedw      ; work         ;
+;                |cntr_fjb:rd_ptr_count|          ; 6 (6)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo5:ff5|scfifo:scfifo_component|scfifo_3r31:auto_generated|a_dpfifo_a141:dpfifo|cntr_fjb:rd_ptr_count                             ; work         ;
+;                |cntr_fjb:wr_ptr|                ; 6 (6)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo5:ff5|scfifo:scfifo_component|scfifo_3r31:auto_generated|a_dpfifo_a141:dpfifo|cntr_fjb:wr_ptr                                   ; work         ;
+;                |dpram_bv01:FIFOram|             ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo5:ff5|scfifo:scfifo_component|scfifo_3r31:auto_generated|a_dpfifo_a141:dpfifo|dpram_bv01:FIFOram                                ; work         ;
+;                   |altsyncram_4vj1:altsyncram2| ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|fifo5:ff5|scfifo:scfifo_component|scfifo_3r31:auto_generated|a_dpfifo_a141:dpfifo|dpram_bv01:FIFOram|altsyncram_4vj1:altsyncram2    ; work         ;
+;    |half_overlap:hovlap|                        ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|half_overlap:hovlap                                                                                                                 ; work         ;
+;    |muxFIFO:mf|                                 ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|muxFIFO:mf                                                                                                                          ; work         ;
+;    |muxpreFFT:mpFFT|                            ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |sistem|muxpreFFT:mpFFT                                                                                                                     ; work         ;
++-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                                   ;
++------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; Name                                                                                                                                           ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
++------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; fifo1a:f1a|scfifo:scfifo_component|scfifo_ls31:auto_generated|a_dpfifo_s241:dpfifo|dpram_cv01:FIFOram|altsyncram_6vj1:altsyncram2|ALTSYNCRAM   ; AUTO ; Simple Dual Port ; 128          ; 32           ; 128          ; 32           ; 4096 ; None ;
+; fifo1b:f1b|scfifo:scfifo_component|scfifo_ls31:auto_generated|a_dpfifo_s241:dpfifo|dpram_cv01:FIFOram|altsyncram_6vj1:altsyncram2|ALTSYNCRAM   ; AUTO ; Simple Dual Port ; 128          ; 32           ; 128          ; 32           ; 4096 ; None ;
+; fifo2Im:f2i|scfifo:scfifo_component|scfifo_ns31:auto_generated|a_dpfifo_u241:dpfifo|dpram_ev01:FIFOram|altsyncram_7vj1:altsyncram1|ALTSYNCRAM  ; AUTO ; Simple Dual Port ; 128          ; 16           ; 128          ; 16           ; 2048 ; None ;
+; fifo2Re:f2r|scfifo:scfifo_component|scfifo_ns31:auto_generated|a_dpfifo_u241:dpfifo|dpram_ev01:FIFOram|altsyncram_7vj1:altsyncram1|ALTSYNCRAM  ; AUTO ; Simple Dual Port ; 128          ; 16           ; 128          ; 16           ; 2048 ; None ;
+; fifo3Im:f3im|scfifo:scfifo_component|scfifo_ls31:auto_generated|a_dpfifo_s241:dpfifo|dpram_cv01:FIFOram|altsyncram_6vj1:altsyncram2|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 128          ; 32           ; 128          ; 32           ; 4096 ; None ;
+; fifo3Re:f3re|scfifo:scfifo_component|scfifo_ns31:auto_generated|a_dpfifo_u241:dpfifo|dpram_ev01:FIFOram|altsyncram_7vj1:altsyncram1|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 128          ; 16           ; 128          ; 16           ; 2048 ; None ;
+; fifo4a:ff4a|scfifo:scfifo_component|scfifo_3r31:auto_generated|a_dpfifo_a141:dpfifo|dpram_bv01:FIFOram|altsyncram_4vj1:altsyncram2|ALTSYNCRAM  ; AUTO ; Simple Dual Port ; 64           ; 32           ; 64           ; 32           ; 2048 ; None ;
+; fifo4b:ff4b|scfifo:scfifo_component|scfifo_3r31:auto_generated|a_dpfifo_a141:dpfifo|dpram_bv01:FIFOram|altsyncram_4vj1:altsyncram2|ALTSYNCRAM  ; AUTO ; Simple Dual Port ; 64           ; 32           ; 64           ; 32           ; 2048 ; None ;
+; fifo5:ff5|scfifo:scfifo_component|scfifo_3r31:auto_generated|a_dpfifo_a141:dpfifo|dpram_bv01:FIFOram|altsyncram_4vj1:altsyncram2|ALTSYNCRAM    ; AUTO ; Simple Dual Port ; 64           ; 32           ; 64           ; 32           ; 2048 ; None ;
++------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |sistem|cunit:cu|SM1:statemachine|fstate                                                                                                                                                             ;
++-------------+-------------+------------+------------+------------+------------+------------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-------------+
+; Name        ; fstate.S1_1 ; fstate.S14 ; fstate.S13 ; fstate.S12 ; fstate.S11 ; fstate.S10 ; fstate.S9 ; fstate.S8 ; fstate.S7 ; fstate.S6 ; fstate.S5 ; fstate.S4 ; fstate.S3 ; fstate.S2 ; fstate.S1 ; fstate.idle ;
++-------------+-------------+------------+------------+------------+------------+------------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-------------+
+; fstate.idle ; 0           ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0           ;
+; fstate.S1   ; 0           ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ; 1           ;
+; fstate.S2   ; 0           ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ; 0         ; 1           ;
+; fstate.S3   ; 0           ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ; 0         ; 0         ; 1           ;
+; fstate.S4   ; 0           ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ; 0         ; 0         ; 0         ; 1           ;
+; fstate.S5   ; 0           ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 1         ; 0         ; 0         ; 0         ; 0         ; 1           ;
+; fstate.S6   ; 0           ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 1         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1           ;
+; fstate.S7   ; 0           ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 1         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1           ;
+; fstate.S8   ; 0           ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 1         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1           ;
+; fstate.S9   ; 0           ; 0          ; 0          ; 0          ; 0          ; 0          ; 1         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1           ;
+; fstate.S10  ; 0           ; 0          ; 0          ; 0          ; 0          ; 1          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1           ;
+; fstate.S11  ; 0           ; 0          ; 0          ; 0          ; 1          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1           ;
+; fstate.S12  ; 0           ; 0          ; 0          ; 1          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1           ;
+; fstate.S13  ; 0           ; 0          ; 1          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1           ;
+; fstate.S14  ; 0           ; 1          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1           ;
+; fstate.S1_1 ; 1           ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1           ;
++-------------+-------------+------------+------------+------------+------------+------------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-------------+
+
+
++-------------------------------------------------------------+
+; Registers Removed During Synthesis                          ;
++----------------------------------------+--------------------+
+; Register name                          ; Reason for Removal ;
++----------------------------------------+--------------------+
+; cunit:cu|SM1:statemachine|fstate~10    ; Lost fanout        ;
+; cunit:cu|SM1:statemachine|fstate~11    ; Lost fanout        ;
+; cunit:cu|SM1:statemachine|fstate~12    ; Lost fanout        ;
+; cunit:cu|SM1:statemachine|fstate~13    ; Lost fanout        ;
+; cunit:cu|SM1:statemachine|fstate~14    ; Lost fanout        ;
+; cunit:cu|SM1:statemachine|fstate~15    ; Lost fanout        ;
+; cunit:cu|SM1:statemachine|fstate~16    ; Lost fanout        ;
+; cunit:cu|SM1:statemachine|fstate~17    ; Lost fanout        ;
+; cunit:cu|SM1:statemachine|fstate~18    ; Lost fanout        ;
+; cunit:cu|SM1:statemachine|fstate~19    ; Lost fanout        ;
+; cunit:cu|SM1:statemachine|fstate~20    ; Lost fanout        ;
+; cunit:cu|SM1:statemachine|fstate~21    ; Lost fanout        ;
+; cunit:cu|SM1:statemachine|fstate~22    ; Lost fanout        ;
+; cunit:cu|SM1:statemachine|fstate~23    ; Lost fanout        ;
+; cunit:cu|SM1:statemachine|fstate~24    ; Lost fanout        ;
+; cunit:cu|SM1:statemachine|fstate~25    ; Lost fanout        ;
+; Total Number of Removed Registers = 16 ;                    ;
++----------------------------------------+--------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 220   ;
+; Number of registers using Synchronous Clear  ; 6     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 214   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 180   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
+; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |sistem|counter2Re:c2Re|q_dat[2] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for fifo1a:f1a|scfifo:scfifo_component|scfifo_ls31:auto_generated|a_dpfifo_s241:dpfifo|dpram_cv01:FIFOram|altsyncram_6vj1:altsyncram2 ;
++---------------------------------+--------------------+------+--------------------------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                                         ;
++---------------------------------+--------------------+------+--------------------------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                                          ;
++---------------------------------+--------------------+------+--------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for fifo1b:f1b|scfifo:scfifo_component|scfifo_ls31:auto_generated|a_dpfifo_s241:dpfifo|dpram_cv01:FIFOram|altsyncram_6vj1:altsyncram2 ;
++---------------------------------+--------------------+------+--------------------------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                                         ;
++---------------------------------+--------------------+------+--------------------------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                                          ;
++---------------------------------+--------------------+------+--------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for fifo3Re:f3re|scfifo:scfifo_component|scfifo_ns31:auto_generated|a_dpfifo_u241:dpfifo|dpram_ev01:FIFOram|altsyncram_7vj1:altsyncram1 ;
++---------------------------------+--------------------+------+----------------------------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                                           ;
++---------------------------------+--------------------+------+----------------------------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                                            ;
++---------------------------------+--------------------+------+----------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for fifo3Im:f3im|scfifo:scfifo_component|scfifo_ls31:auto_generated|a_dpfifo_s241:dpfifo|dpram_cv01:FIFOram|altsyncram_6vj1:altsyncram2 ;
++---------------------------------+--------------------+------+----------------------------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                                           ;
++---------------------------------+--------------------+------+----------------------------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                                            ;
++---------------------------------+--------------------+------+----------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for fifo2Re:f2r|scfifo:scfifo_component|scfifo_ns31:auto_generated|a_dpfifo_u241:dpfifo|dpram_ev01:FIFOram|altsyncram_7vj1:altsyncram1 ;
++---------------------------------+--------------------+------+---------------------------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                                          ;
++---------------------------------+--------------------+------+---------------------------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                                           ;
++---------------------------------+--------------------+------+---------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for fifo2Im:f2i|scfifo:scfifo_component|scfifo_ns31:auto_generated|a_dpfifo_u241:dpfifo|dpram_ev01:FIFOram|altsyncram_7vj1:altsyncram1 ;
++---------------------------------+--------------------+------+---------------------------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                                          ;
++---------------------------------+--------------------+------+---------------------------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                                           ;
++---------------------------------+--------------------+------+---------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for fifo4a:ff4a|scfifo:scfifo_component|scfifo_3r31:auto_generated|a_dpfifo_a141:dpfifo|dpram_bv01:FIFOram|altsyncram_4vj1:altsyncram2 ;
++---------------------------------+--------------------+------+---------------------------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                                          ;
++---------------------------------+--------------------+------+---------------------------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                                           ;
++---------------------------------+--------------------+------+---------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for fifo4b:ff4b|scfifo:scfifo_component|scfifo_3r31:auto_generated|a_dpfifo_a141:dpfifo|dpram_bv01:FIFOram|altsyncram_4vj1:altsyncram2 ;
++---------------------------------+--------------------+------+---------------------------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                                          ;
++---------------------------------+--------------------+------+---------------------------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                                           ;
++---------------------------------+--------------------+------+---------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for fifo5:ff5|scfifo:scfifo_component|scfifo_3r31:auto_generated|a_dpfifo_a141:dpfifo|dpram_bv01:FIFOram|altsyncram_4vj1:altsyncram2 ;
++---------------------------------+--------------------+------+-------------------------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                                        ;
++---------------------------------+--------------------+------+-------------------------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                                         ;
++---------------------------------+--------------------+------+-------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fifo1a:f1a|scfifo:scfifo_component ;
++-------------------------+-------------+-----------------------------------------+
+; Parameter Name          ; Value       ; Type                                    ;
++-------------------------+-------------+-----------------------------------------+
+; AUTO_CARRY_CHAINS       ; ON          ; AUTO_CARRY                              ;
+; IGNORE_CARRY_BUFFERS    ; OFF         ; IGNORE_CARRY                            ;
+; AUTO_CASCADE_CHAINS     ; ON          ; AUTO_CASCADE                            ;
+; IGNORE_CASCADE_BUFFERS  ; OFF         ; IGNORE_CASCADE                          ;
+; lpm_width               ; 32          ; Signed Integer                          ;
+; LPM_NUMWORDS            ; 128         ; Signed Integer                          ;
+; LPM_WIDTHU              ; 7           ; Signed Integer                          ;
+; LPM_SHOWAHEAD           ; OFF         ; Untyped                                 ;
+; UNDERFLOW_CHECKING      ; ON          ; Untyped                                 ;
+; OVERFLOW_CHECKING       ; ON          ; Untyped                                 ;
+; ALLOW_RWCYCLE_WHEN_FULL ; OFF         ; Untyped                                 ;
+; ADD_RAM_OUTPUT_REGISTER ; OFF         ; Untyped                                 ;
+; ALMOST_FULL_VALUE       ; 0           ; Untyped                                 ;
+; ALMOST_EMPTY_VALUE      ; 0           ; Untyped                                 ;
+; USE_EAB                 ; ON          ; Untyped                                 ;
+; MAXIMIZE_SPEED          ; 5           ; Untyped                                 ;
+; DEVICE_FAMILY           ; Cyclone II  ; Untyped                                 ;
+; OPTIMIZE_FOR_SPEED      ; 5           ; Untyped                                 ;
+; CBXI_PARAMETER          ; scfifo_ls31 ; Untyped                                 ;
++-------------------------+-------------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fifo1b:f1b|scfifo:scfifo_component ;
++-------------------------+-------------+-----------------------------------------+
+; Parameter Name          ; Value       ; Type                                    ;
++-------------------------+-------------+-----------------------------------------+
+; AUTO_CARRY_CHAINS       ; ON          ; AUTO_CARRY                              ;
+; IGNORE_CARRY_BUFFERS    ; OFF         ; IGNORE_CARRY                            ;
+; AUTO_CASCADE_CHAINS     ; ON          ; AUTO_CASCADE                            ;
+; IGNORE_CASCADE_BUFFERS  ; OFF         ; IGNORE_CASCADE                          ;
+; lpm_width               ; 32          ; Signed Integer                          ;
+; LPM_NUMWORDS            ; 128         ; Signed Integer                          ;
+; LPM_WIDTHU              ; 7           ; Signed Integer                          ;
+; LPM_SHOWAHEAD           ; OFF         ; Untyped                                 ;
+; UNDERFLOW_CHECKING      ; ON          ; Untyped                                 ;
+; OVERFLOW_CHECKING       ; ON          ; Untyped                                 ;
+; ALLOW_RWCYCLE_WHEN_FULL ; OFF         ; Untyped                                 ;
+; ADD_RAM_OUTPUT_REGISTER ; OFF         ; Untyped                                 ;
+; ALMOST_FULL_VALUE       ; 0           ; Untyped                                 ;
+; ALMOST_EMPTY_VALUE      ; 0           ; Untyped                                 ;
+; USE_EAB                 ; ON          ; Untyped                                 ;
+; MAXIMIZE_SPEED          ; 5           ; Untyped                                 ;
+; DEVICE_FAMILY           ; Cyclone II  ; Untyped                                 ;
+; OPTIMIZE_FOR_SPEED      ; 5           ; Untyped                                 ;
+; CBXI_PARAMETER          ; scfifo_ls31 ; Untyped                                 ;
++-------------------------+-------------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fifo3Re:f3re|scfifo:scfifo_component ;
++-------------------------+-------------+-------------------------------------------+
+; Parameter Name          ; Value       ; Type                                      ;
++-------------------------+-------------+-------------------------------------------+
+; AUTO_CARRY_CHAINS       ; ON          ; AUTO_CARRY                                ;
+; IGNORE_CARRY_BUFFERS    ; OFF         ; IGNORE_CARRY                              ;
+; AUTO_CASCADE_CHAINS     ; ON          ; AUTO_CASCADE                              ;
+; IGNORE_CASCADE_BUFFERS  ; OFF         ; IGNORE_CASCADE                            ;
+; lpm_width               ; 16          ; Signed Integer                            ;
+; LPM_NUMWORDS            ; 128         ; Signed Integer                            ;
+; LPM_WIDTHU              ; 7           ; Signed Integer                            ;
+; LPM_SHOWAHEAD           ; OFF         ; Untyped                                   ;
+; UNDERFLOW_CHECKING      ; ON          ; Untyped                                   ;
+; OVERFLOW_CHECKING       ; ON          ; Untyped                                   ;
+; ALLOW_RWCYCLE_WHEN_FULL ; OFF         ; Untyped                                   ;
+; ADD_RAM_OUTPUT_REGISTER ; OFF         ; Untyped                                   ;
+; ALMOST_FULL_VALUE       ; 0           ; Untyped                                   ;
+; ALMOST_EMPTY_VALUE      ; 0           ; Untyped                                   ;
+; USE_EAB                 ; ON          ; Untyped                                   ;
+; MAXIMIZE_SPEED          ; 5           ; Untyped                                   ;
+; DEVICE_FAMILY           ; Cyclone II  ; Untyped                                   ;
+; OPTIMIZE_FOR_SPEED      ; 5           ; Untyped                                   ;
+; CBXI_PARAMETER          ; scfifo_ns31 ; Untyped                                   ;
++-------------------------+-------------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fifo3Im:f3im|scfifo:scfifo_component ;
++-------------------------+-------------+-------------------------------------------+
+; Parameter Name          ; Value       ; Type                                      ;
++-------------------------+-------------+-------------------------------------------+
+; AUTO_CARRY_CHAINS       ; ON          ; AUTO_CARRY                                ;
+; IGNORE_CARRY_BUFFERS    ; OFF         ; IGNORE_CARRY                              ;
+; AUTO_CASCADE_CHAINS     ; ON          ; AUTO_CASCADE                              ;
+; IGNORE_CASCADE_BUFFERS  ; OFF         ; IGNORE_CASCADE                            ;
+; lpm_width               ; 32          ; Signed Integer                            ;
+; LPM_NUMWORDS            ; 128         ; Signed Integer                            ;
+; LPM_WIDTHU              ; 7           ; Signed Integer                            ;
+; LPM_SHOWAHEAD           ; OFF         ; Untyped                                   ;
+; UNDERFLOW_CHECKING      ; ON          ; Untyped                                   ;
+; OVERFLOW_CHECKING       ; ON          ; Untyped                                   ;
+; ALLOW_RWCYCLE_WHEN_FULL ; OFF         ; Untyped                                   ;
+; ADD_RAM_OUTPUT_REGISTER ; OFF         ; Untyped                                   ;
+; ALMOST_FULL_VALUE       ; 0           ; Untyped                                   ;
+; ALMOST_EMPTY_VALUE      ; 0           ; Untyped                                   ;
+; USE_EAB                 ; ON          ; Untyped                                   ;
+; MAXIMIZE_SPEED          ; 5           ; Untyped                                   ;
+; DEVICE_FAMILY           ; Cyclone II  ; Untyped                                   ;
+; OPTIMIZE_FOR_SPEED      ; 5           ; Untyped                                   ;
+; CBXI_PARAMETER          ; scfifo_ls31 ; Untyped                                   ;
++-------------------------+-------------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fifo2Re:f2r|scfifo:scfifo_component ;
++-------------------------+-------------+------------------------------------------+
+; Parameter Name          ; Value       ; Type                                     ;
++-------------------------+-------------+------------------------------------------+
+; AUTO_CARRY_CHAINS       ; ON          ; AUTO_CARRY                               ;
+; IGNORE_CARRY_BUFFERS    ; OFF         ; IGNORE_CARRY                             ;
+; AUTO_CASCADE_CHAINS     ; ON          ; AUTO_CASCADE                             ;
+; IGNORE_CASCADE_BUFFERS  ; OFF         ; IGNORE_CASCADE                           ;
+; lpm_width               ; 16          ; Signed Integer                           ;
+; LPM_NUMWORDS            ; 128         ; Signed Integer                           ;
+; LPM_WIDTHU              ; 7           ; Signed Integer                           ;
+; LPM_SHOWAHEAD           ; OFF         ; Untyped                                  ;
+; UNDERFLOW_CHECKING      ; ON          ; Untyped                                  ;
+; OVERFLOW_CHECKING       ; ON          ; Untyped                                  ;
+; ALLOW_RWCYCLE_WHEN_FULL ; OFF         ; Untyped                                  ;
+; ADD_RAM_OUTPUT_REGISTER ; OFF         ; Untyped                                  ;
+; ALMOST_FULL_VALUE       ; 0           ; Untyped                                  ;
+; ALMOST_EMPTY_VALUE      ; 0           ; Untyped                                  ;
+; USE_EAB                 ; ON          ; Untyped                                  ;
+; MAXIMIZE_SPEED          ; 5           ; Untyped                                  ;
+; DEVICE_FAMILY           ; Cyclone II  ; Untyped                                  ;
+; OPTIMIZE_FOR_SPEED      ; 5           ; Untyped                                  ;
+; CBXI_PARAMETER          ; scfifo_ns31 ; Untyped                                  ;
++-------------------------+-------------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fifo2Im:f2i|scfifo:scfifo_component ;
++-------------------------+-------------+------------------------------------------+
+; Parameter Name          ; Value       ; Type                                     ;
++-------------------------+-------------+------------------------------------------+
+; AUTO_CARRY_CHAINS       ; ON          ; AUTO_CARRY                               ;
+; IGNORE_CARRY_BUFFERS    ; OFF         ; IGNORE_CARRY                             ;
+; AUTO_CASCADE_CHAINS     ; ON          ; AUTO_CASCADE                             ;
+; IGNORE_CASCADE_BUFFERS  ; OFF         ; IGNORE_CASCADE                           ;
+; lpm_width               ; 16          ; Signed Integer                           ;
+; LPM_NUMWORDS            ; 128         ; Signed Integer                           ;
+; LPM_WIDTHU              ; 7           ; Signed Integer                           ;
+; LPM_SHOWAHEAD           ; OFF         ; Untyped                                  ;
+; UNDERFLOW_CHECKING      ; ON          ; Untyped                                  ;
+; OVERFLOW_CHECKING       ; ON          ; Untyped                                  ;
+; ALLOW_RWCYCLE_WHEN_FULL ; OFF         ; Untyped                                  ;
+; ADD_RAM_OUTPUT_REGISTER ; OFF         ; Untyped                                  ;
+; ALMOST_FULL_VALUE       ; 0           ; Untyped                                  ;
+; ALMOST_EMPTY_VALUE      ; 0           ; Untyped                                  ;
+; USE_EAB                 ; ON          ; Untyped                                  ;
+; MAXIMIZE_SPEED          ; 5           ; Untyped                                  ;
+; DEVICE_FAMILY           ; Cyclone II  ; Untyped                                  ;
+; OPTIMIZE_FOR_SPEED      ; 5           ; Untyped                                  ;
+; CBXI_PARAMETER          ; scfifo_ns31 ; Untyped                                  ;
++-------------------------+-------------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fifo4a:ff4a|scfifo:scfifo_component ;
++-------------------------+-------------+------------------------------------------+
+; Parameter Name          ; Value       ; Type                                     ;
++-------------------------+-------------+------------------------------------------+
+; AUTO_CARRY_CHAINS       ; ON          ; AUTO_CARRY                               ;
+; IGNORE_CARRY_BUFFERS    ; OFF         ; IGNORE_CARRY                             ;
+; AUTO_CASCADE_CHAINS     ; ON          ; AUTO_CASCADE                             ;
+; IGNORE_CASCADE_BUFFERS  ; OFF         ; IGNORE_CASCADE                           ;
+; lpm_width               ; 32          ; Signed Integer                           ;
+; LPM_NUMWORDS            ; 64          ; Signed Integer                           ;
+; LPM_WIDTHU              ; 6           ; Signed Integer                           ;
+; LPM_SHOWAHEAD           ; OFF         ; Untyped                                  ;
+; UNDERFLOW_CHECKING      ; ON          ; Untyped                                  ;
+; OVERFLOW_CHECKING       ; ON          ; Untyped                                  ;
+; ALLOW_RWCYCLE_WHEN_FULL ; OFF         ; Untyped                                  ;
+; ADD_RAM_OUTPUT_REGISTER ; OFF         ; Untyped                                  ;
+; ALMOST_FULL_VALUE       ; 0           ; Untyped                                  ;
+; ALMOST_EMPTY_VALUE      ; 0           ; Untyped                                  ;
+; USE_EAB                 ; ON          ; Untyped                                  ;
+; MAXIMIZE_SPEED          ; 5           ; Untyped                                  ;
+; DEVICE_FAMILY           ; Cyclone II  ; Untyped                                  ;
+; OPTIMIZE_FOR_SPEED      ; 5           ; Untyped                                  ;
+; CBXI_PARAMETER          ; scfifo_3r31 ; Untyped                                  ;
++-------------------------+-------------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fifo4b:ff4b|scfifo:scfifo_component ;
++-------------------------+-------------+------------------------------------------+
+; Parameter Name          ; Value       ; Type                                     ;
++-------------------------+-------------+------------------------------------------+
+; AUTO_CARRY_CHAINS       ; ON          ; AUTO_CARRY                               ;
+; IGNORE_CARRY_BUFFERS    ; OFF         ; IGNORE_CARRY                             ;
+; AUTO_CASCADE_CHAINS     ; ON          ; AUTO_CASCADE                             ;
+; IGNORE_CASCADE_BUFFERS  ; OFF         ; IGNORE_CASCADE                           ;
+; lpm_width               ; 32          ; Signed Integer                           ;
+; LPM_NUMWORDS            ; 64          ; Signed Integer                           ;
+; LPM_WIDTHU              ; 6           ; Signed Integer                           ;
+; LPM_SHOWAHEAD           ; OFF         ; Untyped                                  ;
+; UNDERFLOW_CHECKING      ; ON          ; Untyped                                  ;
+; OVERFLOW_CHECKING       ; ON          ; Untyped                                  ;
+; ALLOW_RWCYCLE_WHEN_FULL ; OFF         ; Untyped                                  ;
+; ADD_RAM_OUTPUT_REGISTER ; OFF         ; Untyped                                  ;
+; ALMOST_FULL_VALUE       ; 0           ; Untyped                                  ;
+; ALMOST_EMPTY_VALUE      ; 0           ; Untyped                                  ;
+; USE_EAB                 ; ON          ; Untyped                                  ;
+; MAXIMIZE_SPEED          ; 5           ; Untyped                                  ;
+; DEVICE_FAMILY           ; Cyclone II  ; Untyped                                  ;
+; OPTIMIZE_FOR_SPEED      ; 5           ; Untyped                                  ;
+; CBXI_PARAMETER          ; scfifo_3r31 ; Untyped                                  ;
++-------------------------+-------------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fifo5:ff5|scfifo:scfifo_component ;
++-------------------------+-------------+----------------------------------------+
+; Parameter Name          ; Value       ; Type                                   ;
++-------------------------+-------------+----------------------------------------+
+; AUTO_CARRY_CHAINS       ; ON          ; AUTO_CARRY                             ;
+; IGNORE_CARRY_BUFFERS    ; OFF         ; IGNORE_CARRY                           ;
+; AUTO_CASCADE_CHAINS     ; ON          ; AUTO_CASCADE                           ;
+; IGNORE_CASCADE_BUFFERS  ; OFF         ; IGNORE_CASCADE                         ;
+; lpm_width               ; 32          ; Signed Integer                         ;
+; LPM_NUMWORDS            ; 64          ; Signed Integer                         ;
+; LPM_WIDTHU              ; 6           ; Signed Integer                         ;
+; LPM_SHOWAHEAD           ; OFF         ; Untyped                                ;
+; UNDERFLOW_CHECKING      ; ON          ; Untyped                                ;
+; OVERFLOW_CHECKING       ; ON          ; Untyped                                ;
+; ALLOW_RWCYCLE_WHEN_FULL ; OFF         ; Untyped                                ;
+; ADD_RAM_OUTPUT_REGISTER ; OFF         ; Untyped                                ;
+; ALMOST_FULL_VALUE       ; 0           ; Untyped                                ;
+; ALMOST_EMPTY_VALUE      ; 0           ; Untyped                                ;
+; USE_EAB                 ; ON          ; Untyped                                ;
+; MAXIMIZE_SPEED          ; 5           ; Untyped                                ;
+; DEVICE_FAMILY           ; Cyclone II  ; Untyped                                ;
+; OPTIMIZE_FOR_SPEED      ; 5           ; Untyped                                ;
+; CBXI_PARAMETER          ; scfifo_3r31 ; Untyped                                ;
++-------------------------+-------------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cunit:cu|SM1:statemachine ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; idle           ; 0     ; Signed Integer                                ;
+; S1             ; 1     ; Signed Integer                                ;
+; S2             ; 2     ; Signed Integer                                ;
+; S3             ; 3     ; Signed Integer                                ;
+; S4             ; 4     ; Signed Integer                                ;
+; S5             ; 5     ; Signed Integer                                ;
+; S6             ; 6     ; Signed Integer                                ;
+; S7             ; 7     ; Signed Integer                                ;
+; S8             ; 8     ; Signed Integer                                ;
+; S9             ; 9     ; Signed Integer                                ;
+; S10            ; 10    ; Signed Integer                                ;
+; S11            ; 11    ; Signed Integer                                ;
+; S12            ; 12    ; Signed Integer                                ;
+; S13            ; 13    ; Signed Integer                                ;
+; S14            ; 14    ; Signed Integer                                ;
+; S1_1           ; 15    ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; scfifo Parameter Settings by Entity Instance                      ;
++----------------------------+--------------------------------------+
+; Name                       ; Value                                ;
++----------------------------+--------------------------------------+
+; Number of entity instances ; 9                                    ;
+; Entity Instance            ; fifo1a:f1a|scfifo:scfifo_component   ;
+;     -- FIFO Type           ; Single Clock                         ;
+;     -- lpm_width           ; 32                                   ;
+;     -- LPM_NUMWORDS        ; 128                                  ;
+;     -- LPM_SHOWAHEAD       ; OFF                                  ;
+;     -- USE_EAB             ; ON                                   ;
+; Entity Instance            ; fifo1b:f1b|scfifo:scfifo_component   ;
+;     -- FIFO Type           ; Single Clock                         ;
+;     -- lpm_width           ; 32                                   ;
+;     -- LPM_NUMWORDS        ; 128                                  ;
+;     -- LPM_SHOWAHEAD       ; OFF                                  ;
+;     -- USE_EAB             ; ON                                   ;
+; Entity Instance            ; fifo3Re:f3re|scfifo:scfifo_component ;
+;     -- FIFO Type           ; Single Clock                         ;
+;     -- lpm_width           ; 16                                   ;
+;     -- LPM_NUMWORDS        ; 128                                  ;
+;     -- LPM_SHOWAHEAD       ; OFF                                  ;
+;     -- USE_EAB             ; ON                                   ;
+; Entity Instance            ; fifo3Im:f3im|scfifo:scfifo_component ;
+;     -- FIFO Type           ; Single Clock                         ;
+;     -- lpm_width           ; 32                                   ;
+;     -- LPM_NUMWORDS        ; 128                                  ;
+;     -- LPM_SHOWAHEAD       ; OFF                                  ;
+;     -- USE_EAB             ; ON                                   ;
+; Entity Instance            ; fifo2Re:f2r|scfifo:scfifo_component  ;
+;     -- FIFO Type           ; Single Clock                         ;
+;     -- lpm_width           ; 16                                   ;
+;     -- LPM_NUMWORDS        ; 128                                  ;
+;     -- LPM_SHOWAHEAD       ; OFF                                  ;
+;     -- USE_EAB             ; ON                                   ;
+; Entity Instance            ; fifo2Im:f2i|scfifo:scfifo_component  ;
+;     -- FIFO Type           ; Single Clock                         ;
+;     -- lpm_width           ; 16                                   ;
+;     -- LPM_NUMWORDS        ; 128                                  ;
+;     -- LPM_SHOWAHEAD       ; OFF                                  ;
+;     -- USE_EAB             ; ON                                   ;
+; Entity Instance            ; fifo4a:ff4a|scfifo:scfifo_component  ;
+;     -- FIFO Type           ; Single Clock                         ;
+;     -- lpm_width           ; 32                                   ;
+;     -- LPM_NUMWORDS        ; 64                                   ;
+;     -- LPM_SHOWAHEAD       ; OFF                                  ;
+;     -- USE_EAB             ; ON                                   ;
+; Entity Instance            ; fifo4b:ff4b|scfifo:scfifo_component  ;
+;     -- FIFO Type           ; Single Clock                         ;
+;     -- lpm_width           ; 32                                   ;
+;     -- LPM_NUMWORDS        ; 64                                   ;
+;     -- LPM_SHOWAHEAD       ; OFF                                  ;
+;     -- USE_EAB             ; ON                                   ;
+; Entity Instance            ; fifo5:ff5|scfifo:scfifo_component    ;
+;     -- FIFO Type           ; Single Clock                         ;
+;     -- lpm_width           ; 32                                   ;
+;     -- LPM_NUMWORDS        ; 64                                   ;
+;     -- LPM_SHOWAHEAD       ; OFF                                  ;
+;     -- USE_EAB             ; ON                                   ;
++----------------------------+--------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "fifo4b:ff4b"                                                                         ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; empty ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "demuxFIFO:dmff"                                                                         ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; inFIFO4A ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; inFIFO4B ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "demuxFFT:dmfft"                                                                                                                       ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                                          ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------+
+; inFIFO2Re ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (16 bits) it drives; bit(s) "inFIFO2Re[31..16]" have no fanouts ;
+; inFIFO2Re ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                              ;
++-----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "fifo2Im:f2i"                                                                         ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; empty ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; usedw ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; full  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "fifo3Im:f3im"                                                                                                                                     ;
++-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                                                          ;
++-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; data  ; Input  ; Warning  ; Input port expression (16 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "data[31..16]" will be connected to GND. ;
+; empty ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                              ;
+; full  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                              ;
+; q     ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (16 bits) it drives; bit(s) "q[31..16]" have no fanouts                         ;
+; usedw ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                              ;
++-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "fifo1b:f1b"                                                                         ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; full ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
+    Info: Processing started: Sat Dec 29 12:59:01 2012
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off sistem -c sistem
+Info: Found 1 design units, including 1 entities, in source file counter2Re.v
+    Info: Found entity 1: counter2Re
+Info: Found 1 design units, including 1 entities, in source file SM1.v
+    Info: Found entity 1: SM1
+Info: Found 1 design units, including 1 entities, in source file fifo2Im.v
+    Info: Found entity 1: fifo2Im
+Info: Found 1 design units, including 1 entities, in source file fifo1a.v
+    Info: Found entity 1: fifo1a
+Info: Found 1 design units, including 1 entities, in source file fifo1b.v
+    Info: Found entity 1: fifo1b
+Info: Found 1 design units, including 1 entities, in source file half_overlap.v
+    Info: Found entity 1: half_overlap
+Info: Found 1 design units, including 1 entities, in source file cunit.v
+    Info: Found entity 1: cunit
+Info: Found 1 design units, including 1 entities, in source file demuxFFT.v
+    Info: Found entity 1: demuxFFT
+Info: Found 1 design units, including 1 entities, in source file demuxFIFO.v
+    Info: Found entity 1: demuxFIFO
+Info: Found 1 design units, including 1 entities, in source file muxFIFO.v
+    Info: Found entity 1: muxFIFO
+Info: Found 1 design units, including 1 entities, in source file muxpreFFT.v
+    Info: Found entity 1: muxpreFFT
+Info: Found 1 design units, including 1 entities, in source file sistem.v
+    Info: Found entity 1: sistem
+Info: Found 1 design units, including 1 entities, in source file fifo2Re.v
+    Info: Found entity 1: fifo2Re
+Info: Found 1 design units, including 1 entities, in source file fifo3Im.v
+    Info: Found entity 1: fifo3Im
+Info: Found 1 design units, including 1 entities, in source file fifo3Re.v
+    Info: Found entity 1: fifo3Re
+Info: Found 1 design units, including 1 entities, in source file fifo4a.v
+    Info: Found entity 1: fifo4a
+Info: Found 1 design units, including 1 entities, in source file fifo4b.v
+    Info: Found entity 1: fifo4b
+Info: Found 1 design units, including 1 entities, in source file fifo5.v
+    Info: Found entity 1: fifo5
+Info: Found 1 design units, including 1 entities, in source file mult256.v
+    Info: Found entity 1: mult256
+Critical Warning (10846): Verilog HDL Instantiation warning at sistem.v(234): instance has no name
+Info: Elaborating entity "sistem" for the top level hierarchy
+Info: Elaborating entity "fifo1a" for hierarchy "fifo1a:f1a"
+Info: Elaborating entity "scfifo" for hierarchy "fifo1a:f1a|scfifo:scfifo_component"
+Info: Elaborated megafunction instantiation "fifo1a:f1a|scfifo:scfifo_component"
+Info: Instantiated megafunction "fifo1a:f1a|scfifo:scfifo_component" with the following parameter:
+    Info: Parameter "add_ram_output_register" = "OFF"
+    Info: Parameter "intended_device_family" = "Cyclone II"
+    Info: Parameter "lpm_numwords" = "128"
+    Info: Parameter "lpm_showahead" = "OFF"
+    Info: Parameter "lpm_type" = "scfifo"
+    Info: Parameter "lpm_width" = "32"
+    Info: Parameter "lpm_widthu" = "7"
+    Info: Parameter "overflow_checking" = "ON"
+    Info: Parameter "underflow_checking" = "ON"
+    Info: Parameter "use_eab" = "ON"
+Info: Found 1 design units, including 1 entities, in source file db/scfifo_ls31.tdf
+    Info: Found entity 1: scfifo_ls31
+Info: Elaborating entity "scfifo_ls31" for hierarchy "fifo1a:f1a|scfifo:scfifo_component|scfifo_ls31:auto_generated"
+Info: Found 1 design units, including 1 entities, in source file db/a_dpfifo_s241.tdf
+    Info: Found entity 1: a_dpfifo_s241
+Info: Elaborating entity "a_dpfifo_s241" for hierarchy "fifo1a:f1a|scfifo:scfifo_component|scfifo_ls31:auto_generated|a_dpfifo_s241:dpfifo"
+Info: Found 1 design units, including 1 entities, in source file db/a_fefifo_t7f.tdf
+    Info: Found entity 1: a_fefifo_t7f
+Info: Elaborating entity "a_fefifo_t7f" for hierarchy "fifo1a:f1a|scfifo:scfifo_component|scfifo_ls31:auto_generated|a_dpfifo_s241:dpfifo|a_fefifo_t7f:fifo_state"
+Info: Found 1 design units, including 1 entities, in source file db/cntr_sj7.tdf
+    Info: Found entity 1: cntr_sj7
+Info: Elaborating entity "cntr_sj7" for hierarchy "fifo1a:f1a|scfifo:scfifo_component|scfifo_ls31:auto_generated|a_dpfifo_s241:dpfifo|a_fefifo_t7f:fifo_state|cntr_sj7:count_usedw"
+Info: Found 1 design units, including 1 entities, in source file db/dpram_cv01.tdf
+    Info: Found entity 1: dpram_cv01
+Info: Elaborating entity "dpram_cv01" for hierarchy "fifo1a:f1a|scfifo:scfifo_component|scfifo_ls31:auto_generated|a_dpfifo_s241:dpfifo|dpram_cv01:FIFOram"
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_6vj1.tdf
+    Info: Found entity 1: altsyncram_6vj1
+Info: Elaborating entity "altsyncram_6vj1" for hierarchy "fifo1a:f1a|scfifo:scfifo_component|scfifo_ls31:auto_generated|a_dpfifo_s241:dpfifo|dpram_cv01:FIFOram|altsyncram_6vj1:altsyncram2"
+Info: Found 1 design units, including 1 entities, in source file db/cntr_gjb.tdf
+    Info: Found entity 1: cntr_gjb
+Info: Elaborating entity "cntr_gjb" for hierarchy "fifo1a:f1a|scfifo:scfifo_component|scfifo_ls31:auto_generated|a_dpfifo_s241:dpfifo|cntr_gjb:rd_ptr_count"
+Info: Elaborating entity "fifo1b" for hierarchy "fifo1b:f1b"
+Info: Elaborating entity "muxFIFO" for hierarchy "muxFIFO:mf"
+Info: Elaborating entity "fifo3Re" for hierarchy "fifo3Re:f3re"
+Info: Elaborating entity "scfifo" for hierarchy "fifo3Re:f3re|scfifo:scfifo_component"
+Info: Elaborated megafunction instantiation "fifo3Re:f3re|scfifo:scfifo_component"
+Info: Instantiated megafunction "fifo3Re:f3re|scfifo:scfifo_component" with the following parameter:
+    Info: Parameter "add_ram_output_register" = "OFF"
+    Info: Parameter "intended_device_family" = "Cyclone II"
+    Info: Parameter "lpm_numwords" = "128"
+    Info: Parameter "lpm_showahead" = "OFF"
+    Info: Parameter "lpm_type" = "scfifo"
+    Info: Parameter "lpm_width" = "16"
+    Info: Parameter "lpm_widthu" = "7"
+    Info: Parameter "overflow_checking" = "ON"
+    Info: Parameter "underflow_checking" = "ON"
+    Info: Parameter "use_eab" = "ON"
+Info: Found 1 design units, including 1 entities, in source file db/scfifo_ns31.tdf
+    Info: Found entity 1: scfifo_ns31
+Info: Elaborating entity "scfifo_ns31" for hierarchy "fifo3Re:f3re|scfifo:scfifo_component|scfifo_ns31:auto_generated"
+Info: Found 1 design units, including 1 entities, in source file db/a_dpfifo_u241.tdf
+    Info: Found entity 1: a_dpfifo_u241
+Info: Elaborating entity "a_dpfifo_u241" for hierarchy "fifo3Re:f3re|scfifo:scfifo_component|scfifo_ns31:auto_generated|a_dpfifo_u241:dpfifo"
+Info: Found 1 design units, including 1 entities, in source file db/dpram_ev01.tdf
+    Info: Found entity 1: dpram_ev01
+Info: Elaborating entity "dpram_ev01" for hierarchy "fifo3Re:f3re|scfifo:scfifo_component|scfifo_ns31:auto_generated|a_dpfifo_u241:dpfifo|dpram_ev01:FIFOram"
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_7vj1.tdf
+    Info: Found entity 1: altsyncram_7vj1
+Info: Elaborating entity "altsyncram_7vj1" for hierarchy "fifo3Re:f3re|scfifo:scfifo_component|scfifo_ns31:auto_generated|a_dpfifo_u241:dpfifo|dpram_ev01:FIFOram|altsyncram_7vj1:altsyncram1"
+Info: Elaborating entity "fifo3Im" for hierarchy "fifo3Im:f3im"
+Info: Elaborating entity "muxpreFFT" for hierarchy "muxpreFFT:mpFFT"
+Info: Elaborating entity "counter2Re" for hierarchy "counter2Re:c2Re"
+Warning (10230): Verilog HDL assignment warning at counter2Re.v(10): truncated value with size 32 to match size of target (1)
+Info: Elaborating entity "fifo2Re" for hierarchy "fifo2Re:f2r"
+Info: Elaborating entity "fifo2Im" for hierarchy "fifo2Im:f2i"
+Info: Elaborating entity "demuxFFT" for hierarchy "demuxFFT:dmfft"
+Info: Elaborating entity "mult256" for hierarchy "mult256:comb_43"
+Info: Elaborating entity "demuxFIFO" for hierarchy "demuxFIFO:dmff"
+Info: Elaborating entity "fifo4a" for hierarchy "fifo4a:ff4a"
+Info: Elaborating entity "scfifo" for hierarchy "fifo4a:ff4a|scfifo:scfifo_component"
+Info: Elaborated megafunction instantiation "fifo4a:ff4a|scfifo:scfifo_component"
+Info: Instantiated megafunction "fifo4a:ff4a|scfifo:scfifo_component" with the following parameter:
+    Info: Parameter "add_ram_output_register" = "OFF"
+    Info: Parameter "intended_device_family" = "Cyclone II"
+    Info: Parameter "lpm_numwords" = "64"
+    Info: Parameter "lpm_showahead" = "OFF"
+    Info: Parameter "lpm_type" = "scfifo"
+    Info: Parameter "lpm_width" = "32"
+    Info: Parameter "lpm_widthu" = "6"
+    Info: Parameter "overflow_checking" = "ON"
+    Info: Parameter "underflow_checking" = "ON"
+    Info: Parameter "use_eab" = "ON"
+Info: Found 1 design units, including 1 entities, in source file db/scfifo_3r31.tdf
+    Info: Found entity 1: scfifo_3r31
+Info: Elaborating entity "scfifo_3r31" for hierarchy "fifo4a:ff4a|scfifo:scfifo_component|scfifo_3r31:auto_generated"
+Info: Found 1 design units, including 1 entities, in source file db/a_dpfifo_a141.tdf
+    Info: Found entity 1: a_dpfifo_a141
+Info: Elaborating entity "a_dpfifo_a141" for hierarchy "fifo4a:ff4a|scfifo:scfifo_component|scfifo_3r31:auto_generated|a_dpfifo_a141:dpfifo"
+Info: Found 1 design units, including 1 entities, in source file db/a_fefifo_b6f.tdf
+    Info: Found entity 1: a_fefifo_b6f
+Info: Elaborating entity "a_fefifo_b6f" for hierarchy "fifo4a:ff4a|scfifo:scfifo_component|scfifo_3r31:auto_generated|a_dpfifo_a141:dpfifo|a_fefifo_b6f:fifo_state"
+Info: Found 1 design units, including 1 entities, in source file db/cntr_rj7.tdf
+    Info: Found entity 1: cntr_rj7
+Info: Elaborating entity "cntr_rj7" for hierarchy "fifo4a:ff4a|scfifo:scfifo_component|scfifo_3r31:auto_generated|a_dpfifo_a141:dpfifo|a_fefifo_b6f:fifo_state|cntr_rj7:count_usedw"
+Info: Found 1 design units, including 1 entities, in source file db/dpram_bv01.tdf
+    Info: Found entity 1: dpram_bv01
+Info: Elaborating entity "dpram_bv01" for hierarchy "fifo4a:ff4a|scfifo:scfifo_component|scfifo_3r31:auto_generated|a_dpfifo_a141:dpfifo|dpram_bv01:FIFOram"
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_4vj1.tdf
+    Info: Found entity 1: altsyncram_4vj1
+Info: Elaborating entity "altsyncram_4vj1" for hierarchy "fifo4a:ff4a|scfifo:scfifo_component|scfifo_3r31:auto_generated|a_dpfifo_a141:dpfifo|dpram_bv01:FIFOram|altsyncram_4vj1:altsyncram2"
+Info: Found 1 design units, including 1 entities, in source file db/cntr_fjb.tdf
+    Info: Found entity 1: cntr_fjb
+Info: Elaborating entity "cntr_fjb" for hierarchy "fifo4a:ff4a|scfifo:scfifo_component|scfifo_3r31:auto_generated|a_dpfifo_a141:dpfifo|cntr_fjb:rd_ptr_count"
+Info: Elaborating entity "fifo4b" for hierarchy "fifo4b:ff4b"
+Info: Elaborating entity "half_overlap" for hierarchy "half_overlap:hovlap"
+Info: Elaborating entity "fifo5" for hierarchy "fifo5:ff5"
+Info: Elaborating entity "cunit" for hierarchy "cunit:cu"
+Warning (10230): Verilog HDL assignment warning at cunit.v(45): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at cunit.v(49): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at cunit.v(50): truncated value with size 32 to match size of target (1)
+Info: Elaborating entity "SM1" for hierarchy "cunit:cu|SM1:statemachine"
+Warning: Synthesized away the following node(s):
+    Warning: Synthesized away the following RAM node(s):
+        Warning (14320): Synthesized away node "fifo3Im:f3im|scfifo:scfifo_component|scfifo_ls31:auto_generated|a_dpfifo_s241:dpfifo|dpram_cv01:FIFOram|altsyncram_6vj1:altsyncram2|q_b[16]"
+        Warning (14320): Synthesized away node "fifo3Im:f3im|scfifo:scfifo_component|scfifo_ls31:auto_generated|a_dpfifo_s241:dpfifo|dpram_cv01:FIFOram|altsyncram_6vj1:altsyncram2|q_b[17]"
+        Warning (14320): Synthesized away node "fifo3Im:f3im|scfifo:scfifo_component|scfifo_ls31:auto_generated|a_dpfifo_s241:dpfifo|dpram_cv01:FIFOram|altsyncram_6vj1:altsyncram2|q_b[18]"
+        Warning (14320): Synthesized away node "fifo3Im:f3im|scfifo:scfifo_component|scfifo_ls31:auto_generated|a_dpfifo_s241:dpfifo|dpram_cv01:FIFOram|altsyncram_6vj1:altsyncram2|q_b[19]"
+        Warning (14320): Synthesized away node "fifo3Im:f3im|scfifo:scfifo_component|scfifo_ls31:auto_generated|a_dpfifo_s241:dpfifo|dpram_cv01:FIFOram|altsyncram_6vj1:altsyncram2|q_b[20]"
+        Warning (14320): Synthesized away node "fifo3Im:f3im|scfifo:scfifo_component|scfifo_ls31:auto_generated|a_dpfifo_s241:dpfifo|dpram_cv01:FIFOram|altsyncram_6vj1:altsyncram2|q_b[21]"
+        Warning (14320): Synthesized away node "fifo3Im:f3im|scfifo:scfifo_component|scfifo_ls31:auto_generated|a_dpfifo_s241:dpfifo|dpram_cv01:FIFOram|altsyncram_6vj1:altsyncram2|q_b[22]"
+        Warning (14320): Synthesized away node "fifo3Im:f3im|scfifo:scfifo_component|scfifo_ls31:auto_generated|a_dpfifo_s241:dpfifo|dpram_cv01:FIFOram|altsyncram_6vj1:altsyncram2|q_b[23]"
+        Warning (14320): Synthesized away node "fifo3Im:f3im|scfifo:scfifo_component|scfifo_ls31:auto_generated|a_dpfifo_s241:dpfifo|dpram_cv01:FIFOram|altsyncram_6vj1:altsyncram2|q_b[24]"
+        Warning (14320): Synthesized away node "fifo3Im:f3im|scfifo:scfifo_component|scfifo_ls31:auto_generated|a_dpfifo_s241:dpfifo|dpram_cv01:FIFOram|altsyncram_6vj1:altsyncram2|q_b[25]"
+        Warning (14320): Synthesized away node "fifo3Im:f3im|scfifo:scfifo_component|scfifo_ls31:auto_generated|a_dpfifo_s241:dpfifo|dpram_cv01:FIFOram|altsyncram_6vj1:altsyncram2|q_b[26]"
+        Warning (14320): Synthesized away node "fifo3Im:f3im|scfifo:scfifo_component|scfifo_ls31:auto_generated|a_dpfifo_s241:dpfifo|dpram_cv01:FIFOram|altsyncram_6vj1:altsyncram2|q_b[27]"
+        Warning (14320): Synthesized away node "fifo3Im:f3im|scfifo:scfifo_component|scfifo_ls31:auto_generated|a_dpfifo_s241:dpfifo|dpram_cv01:FIFOram|altsyncram_6vj1:altsyncram2|q_b[28]"
+        Warning (14320): Synthesized away node "fifo3Im:f3im|scfifo:scfifo_component|scfifo_ls31:auto_generated|a_dpfifo_s241:dpfifo|dpram_cv01:FIFOram|altsyncram_6vj1:altsyncram2|q_b[29]"
+        Warning (14320): Synthesized away node "fifo3Im:f3im|scfifo:scfifo_component|scfifo_ls31:auto_generated|a_dpfifo_s241:dpfifo|dpram_cv01:FIFOram|altsyncram_6vj1:altsyncram2|q_b[30]"
+        Warning (14320): Synthesized away node "fifo3Im:f3im|scfifo:scfifo_component|scfifo_ls31:auto_generated|a_dpfifo_s241:dpfifo|dpram_cv01:FIFOram|altsyncram_6vj1:altsyncram2|q_b[31]"
+Warning: 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info: 16 registers lost all their fanouts during netlist optimizations. The first 16 are displayed below.
+    Info: Register "cunit:cu|SM1:statemachine|fstate~10" lost all its fanouts during netlist optimizations.
+    Info: Register "cunit:cu|SM1:statemachine|fstate~11" lost all its fanouts during netlist optimizations.
+    Info: Register "cunit:cu|SM1:statemachine|fstate~12" lost all its fanouts during netlist optimizations.
+    Info: Register "cunit:cu|SM1:statemachine|fstate~13" lost all its fanouts during netlist optimizations.
+    Info: Register "cunit:cu|SM1:statemachine|fstate~14" lost all its fanouts during netlist optimizations.
+    Info: Register "cunit:cu|SM1:statemachine|fstate~15" lost all its fanouts during netlist optimizations.
+    Info: Register "cunit:cu|SM1:statemachine|fstate~16" lost all its fanouts during netlist optimizations.
+    Info: Register "cunit:cu|SM1:statemachine|fstate~17" lost all its fanouts during netlist optimizations.
+    Info: Register "cunit:cu|SM1:statemachine|fstate~18" lost all its fanouts during netlist optimizations.
+    Info: Register "cunit:cu|SM1:statemachine|fstate~19" lost all its fanouts during netlist optimizations.
+    Info: Register "cunit:cu|SM1:statemachine|fstate~20" lost all its fanouts during netlist optimizations.
+    Info: Register "cunit:cu|SM1:statemachine|fstate~21" lost all its fanouts during netlist optimizations.
+    Info: Register "cunit:cu|SM1:statemachine|fstate~22" lost all its fanouts during netlist optimizations.
+    Info: Register "cunit:cu|SM1:statemachine|fstate~23" lost all its fanouts during netlist optimizations.
+    Info: Register "cunit:cu|SM1:statemachine|fstate~24" lost all its fanouts during netlist optimizations.
+    Info: Register "cunit:cu|SM1:statemachine|fstate~25" lost all its fanouts during netlist optimizations.
+Info: Generated suppressed messages file C:/Documents and Settings/abduh/My Documents/quartus_project/Copy of STATE MACHINE SEDANG DI CEK/sistem.map.smsg
+Info: Implemented 1045 device resources after synthesis - the final resource count might be different
+    Info: Implemented 68 input pins
+    Info: Implemented 360 output pins
+    Info: Implemented 393 logic cells
+    Info: Implemented 224 RAM segments
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 24 warnings
+    Info: Peak virtual memory: 189 megabytes
+    Info: Processing ended: Sat Dec 29 12:59:09 2012
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:07
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Documents and Settings/abduh/My Documents/quartus_project/Copy of STATE MACHINE SEDANG DI CEK/sistem.map.smsg.
+
+

@@ -1,0 +1,120 @@
+<internal_error>
+	<executable>quartus.exe</executable>
+	<sub_system>unknown</sub_system>
+	<file>unknown</file>
+	<line>0</line>
+	<callstack>
+	0x28746867:
+	0x0c631d3c: edt_sme + 0x51d3c (??1SME_COMPILE_GENERATOR@@QAE@XZ + 0x778c)
+	0x7e418829: USER32 + 0x8829 (GetDC + 0x162)
+	0x7e428e9f: USER32 + 0x18e9f (DefWindowProcW + 0x17f)
+	0x7e428eaa: USER32 + 0x18eaa (DefWindowProcW + 0x18a)
+	0x006d4b0d: ccl_mem + 0x4b0d (?splay_heap@MEM_SEGMENT_INTERNAL@@AAIPAVMEM_MEGA_PAGE@@PAX@Z + 0x14d)
+	0x006da128: ccl_mem + 0xa128 (?mem_realloc_wrapper@@YIPAXPAXIPAVMEM_TRACKER_THUNK@@PBD@Z + 0x188)
+	0x006d1cac: ccl_mem + 0x1cac (?mem_delete_wrapper@@YIXPAXPAPBD@Z + 0x2c)
+	0x0c64c7cb: edt_sme + 0x6c7cb (??1CxIOFile@@UAE@XZ + 0x4deb)
+	0x0c632791: edt_sme + 0x52791 (??1SME_COMPILE_GENERATOR@@QAE@XZ + 0x81e1)
+	0x0c64af41: edt_sme + 0x6af41 (??1CxIOFile@@UAE@XZ + 0x3561)
+	0x0c648f81: edt_sme + 0x68f81 (??1CxIOFile@@UAE@XZ + 0x15a1)
+	0x7863becb: mfc90 + 0x5becb
+	</callstack>
+	<error>Current editor: , RPW, STED, STED, WED, SFW</error>
+	<date>Fri Dec 28 14:59:42 2012</date>
+	<version>Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version</version>
+	<full_error>Access Violation at 0X28746867
+Current editor: , RPW, STED, STED, WED, SFW
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version </full_error>
+</internal_error>
+
+<internal_error>
+	<executable>quartus.exe</executable>
+	<sub_system>unknown</sub_system>
+	<file>unknown</file>
+	<line>0</line>
+	<error>Current editor: , WED, STED, SFW, RPW, STED, STED</error>
+	<date>Fri Dec 28 19:04:32 2012</date>
+	<version>Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version</version>
+	<full_error>Access Violation at 00000000
+Current editor: , WED, STED, SFW, RPW, STED, STED
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version </full_error>
+</internal_error>
+
+<internal_error>
+	<executable>quartus.exe</executable>
+	<sub_system>unknown</sub_system>
+	<file>unknown</file>
+	<line>0</line>
+	<callstack>
+	0x28746867:
+	0x0a111d3c: edt_sme + 0x51d3c (??1SME_COMPILE_GENERATOR@@QAE@XZ + 0x778c)
+	0x7e431922: USER32 + 0x21922 (UnhookWinEvent + 0x76)
+	0x006d4b0d: ccl_mem + 0x4b0d (?splay_heap@MEM_SEGMENT_INTERNAL@@AAIPAVMEM_MEGA_PAGE@@PAX@Z + 0x14d)
+	0x006da128: ccl_mem + 0xa128 (?mem_realloc_wrapper@@YIPAXPAXIPAVMEM_TRACKER_THUNK@@PBD@Z + 0x188)
+	0x006d1cac: ccl_mem + 0x1cac (?mem_delete_wrapper@@YIXPAXPAPBD@Z + 0x2c)
+	0x0a12c7cb: edt_sme + 0x6c7cb (??1CxIOFile@@UAE@XZ + 0x4deb)
+	0x0a112791: edt_sme + 0x52791 (??1SME_COMPILE_GENERATOR@@QAE@XZ + 0x81e1)
+	0x0a12af41: edt_sme + 0x6af41 (??1CxIOFile@@UAE@XZ + 0x3561)
+	0x0a128f81: edt_sme + 0x68f81 (??1CxIOFile@@UAE@XZ + 0x15a1)
+	0x7863becb: mfc90 + 0x5becb
+	</callstack>
+	<error>Current editor: , STED, WED, STED</error>
+	<date>Fri Dec 28 19:14:57 2012</date>
+	<version>Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version</version>
+	<full_error>Access Violation at 0X28746867
+Current editor: , STED, WED, STED
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version </full_error>
+</internal_error>
+
+<internal_error>
+	<executable>quartus.exe</executable>
+	<sub_system>unknown</sub_system>
+	<file>unknown</file>
+	<line>0</line>
+	<callstack>
+	0x0a2a1d31: edt_sme + 0x51d31 (??1SME_COMPILE_GENERATOR@@QAE@XZ + 0x7781)
+	0x7e418829: USER32 + 0x8829 (GetDC + 0x162)
+	0x7e428e9f: USER32 + 0x18e9f (DefWindowProcW + 0x17f)
+	0x7e428eaa: USER32 + 0x18eaa (DefWindowProcW + 0x18a)
+	0x006d4b0d: ccl_mem + 0x4b0d (?splay_heap@MEM_SEGMENT_INTERNAL@@AAIPAVMEM_MEGA_PAGE@@PAX@Z + 0x14d)
+	0x006da128: ccl_mem + 0xa128 (?mem_realloc_wrapper@@YIPAXPAXIPAVMEM_TRACKER_THUNK@@PBD@Z + 0x188)
+	0x006d1cac: ccl_mem + 0x1cac (?mem_delete_wrapper@@YIXPAXPAPBD@Z + 0x2c)
+	0x0a2bc7cb: edt_sme + 0x6c7cb (??1CxIOFile@@UAE@XZ + 0x4deb)
+	0x0a2a2791: edt_sme + 0x52791 (??1SME_COMPILE_GENERATOR@@QAE@XZ + 0x81e1)
+	0x0a2baf41: edt_sme + 0x6af41 (??1CxIOFile@@UAE@XZ + 0x3561)
+	0x0a2b8f81: edt_sme + 0x68f81 (??1CxIOFile@@UAE@XZ + 0x15a1)
+	0x7863becb: mfc90 + 0x5becb
+	</callstack>
+	<error>Current editor: , WED, SFW, RPW, STED, STED, STED, STED</error>
+	<date>Fri Dec 28 19:30:59 2012</date>
+	<version>Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version</version>
+	<full_error>Access Violation at 0X0A2A1D31
+Current editor: , WED, SFW, RPW, STED, STED, STED, STED
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version </full_error>
+</internal_error>
+
+<internal_error>
+	<executable>quartus.exe</executable>
+	<sub_system>SME</sub_system>
+	<file>/quartus/edt/sme/sme_state.cpp</file>
+	<line>102</line>
+	<callstack>
+	0x0f32b150: edt_sme + 0x5b150 (??1SME_COMPILE_GENERATOR@@QAE@XZ + 0x10ba0)
+	0x0f2dcd47: edt_sme + 0xcd47 (??0SME_COMPILE_GENERATOR@@QAE@XZ + 0xf7)
+	0x0f2debbf: edt_sme + 0xebbf (??0SME_COMPILE_GENERATOR@@QAE@XZ + 0x1f6f)
+	0x0f2df4f7: edt_sme + 0xf4f7 (??0SME_COMPILE_GENERATOR@@QAE@XZ + 0x28a7)
+	0x00bb1092: GCL_CUI + 0x11092 (?flush_buffers@CUI_UNDO_ENGINE@@QAIXXZ + 0x32)
+	0x0f2e0eed: edt_sme + 0x10eed (??0SME_COMPILE_GENERATOR@@QAE@XZ + 0x429d)
+	0x0f2e1247: edt_sme + 0x11247 (??0SME_COMPILE_GENERATOR@@QAE@XZ + 0x45f7)
+	0x786a996a: mfc90 + 0xc996a
+	0x7866b24d: mfc90 + 0x8b24d
+	0x1001a145: GCL_AFC + 0x1a145 (?close_all_non_tool_documents@AFC_TEMPLATE_MANAGER@@QAIXXZ + 0x195)
+	0x0041b521: quartus + 0x1b521 (Pjm_Uninit + 0xc2e1)
+	0x006d1cac: ccl_mem + 0x1cac (?mem_delete_wrapper@@YIXPAXPAPBD@Z + 0x2c)
+	</callstack>
+	<error>trans_special_iter != m_transition_out_set.end()</error>
+	<date>Sat Dec 29 11:42:20 2012</date>
+	<version>Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version</version>
+	<full_error>trans_special_iter != m_transition_out_set.end()
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version </full_error>
+</internal_error>
+

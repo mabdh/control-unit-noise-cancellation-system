@@ -1,0 +1,321 @@
+module sistem(clock,reset,start,data1,
+	//sinyal diamati
+	usedw1a,usedw1b,usedw3Re,
+	rdreq1a,rdreq1b,
+	wrreq1b,
+	selmuxFIFO,selmuxFFT,
+	usedw2Re,usedw4a,usedw4b,
+	wrreq2,fft_enable,niosread2,niosread5,nioswrite,
+	usedw5,rdreq4,wrreq4b,
+	empty1a,empty1b,
+	empty3Re,rdreq3,
+	wrreq4a, empty2Re,
+	empty5,wrreq5,
+	full1a,full4a,full4b,full5,full3Re,empty4a,
+	outFIFO2Im,outFIFO2Re,
+	inFIFO3Re,inFIFO3Im,
+	outFIFO5,
+	//outmuxpreFFT,
+	outFFT,
+	outmuxFIFO,outmuxpreFFT,
+	wrreq1a,outFIFO1a,outFIFO1b,outFIFO4a,outFIFO4b);
+	
+	/*output [31:0]outmuxpreFFT;
+	input [31:0] outFFT;*/
+	//output [3:0]state,next_state;
+	output [31:0]outFFT;
+	output [31:0]outmuxFIFO,outmuxpreFFT;
+	output [31:0]outFIFO1a,outFIFO1b,outFIFO4a,outFIFO4b;
+	output wrreq4b;
+	output [15:0] outFIFO2Im,outFIFO2Re;
+	input [15:0] inFIFO3Im,inFIFO3Re;
+	output [31:0]outFIFO5;
+	
+	input clock,reset;
+	input [31:0]data1;
+	input start;
+	
+	//sinyal diamati
+	output [6:0]usedw1a;
+	output [6:0]usedw1b;
+	output [6:0]usedw3Re;
+	output [6:0]usedw2Re;
+	output [5:0]usedw4a,usedw4b,usedw5;
+	output rdreq1a,rdreq1b;//,rdreq3Re;
+	output wrreq1b;
+	//output [5:0]q_dat;
+	output selmuxFIFO,selmuxFFT;
+	output rdreq4;//a,rdreq4b;
+	output wrreq2,wrreq4a;
+	output fft_enable;
+	output niosread2,niosread5;
+	input nioswrite;
+	output empty1a,empty1b,	empty3Re,rdreq3,empty2Re,
+	empty5,wrreq5,
+	full1a,full4a,full4b,full5,full3Re,empty4a,wrreq1a;
+	
+	wire [31:0]outmuxFIFO;
+	wire [31:0]outmuxpreFFT;
+	
+	//FIFO1A & 1B
+	wire wrreq1b,inwrreq1b;
+	wire rdreq1a;
+	wire rdreq1b;
+	wire empty1a,empty1b;
+	wire active1a,active1b,active1a_o,active1b_o;
+	wire [6:0]usedw1a;
+	wire [6:0]usedw1b;
+	wire f641a,f641b;
+	wire f641a_o,f641b_o;
+	wire [31:0]outFIFO1a,outFIFO1b;
+	wire selmuxFIFO;
+	//NIOS
+	wire niosread2,niosread5,nioswrite;
+	//FIFO3 Re & Im
+	wire [15:0]inFIFO3Re;
+	wire [15:0]inFIFO3Im;
+	wire rdreq3;
+	wire empty3Re;
+	wire [15:0]outFIFO3Re;
+	wire [15:0]outFIFO3Im;
+	wire [6:0]usedw3Re;
+	wire [6:0]usedw3Im;
+	wire f643Re,f643Re_o;
+	wire active3Re,active3Re_o;
+	//FFT/IFFT
+	wire [31:0]outFFT;
+	wire fft_enable;
+	//FIFO2Re & FIFO2Im
+	wire [15:0]outFIFO2Re,inFIFO2Re;
+	wire [15:0]outFIFO2Im,inFIFO2Im;
+	wire wrreq2;
+	wire empty2Re,active2Re;
+	wire [6:0]usedw2Re;
+	wire [6:0]usedw2Im;
+	wire f642Re;
+	wire active2Re_o;
+	wire f642Re_o;
+	//demuxFFT
+	wire seldemuxFFT;
+
+	//demuxFIFO
+	wire [31:0]outdemuxFFT,outmult256;
+	wire seldemuxFIFO;
+	wire [31:0]inFIFO4A;
+	wire [31:0]inFIFO4B;
+	
+	//FIFO4A & FIFO4B
+	wire rdreq4;
+	wire wrreq4a;
+	wire [31:0]inFIFO4a,outFIFO4a;
+	wire [5:0]usedw4a,usedw4b;
+	wire wrreq4b;
+	wire [31:0]inFIFO4b,outFIFO4b;
+	wire empty4a,empty4b;
+	//FIFO5
+	wire empty5,wrreq5;
+	wire [5:0]usedw5;
+	wire active5,active5_o;
+	//wire rdreq5;
+	wire f645_o,f645;
+	wire [31:0]inFIFO5,outFIFO5;
+	//assign f645_o = 1;
+	wire wrreq1a,full1b,empty3Im,full3Im,full2Re,empty2Im,full2Im;
+//	wire wrreq1a_o,wrreq1b_o,rdreq3_o;
+///////////////////////////////
+fifo1a f1a(
+	.aclr (!reset),
+	.clock (clock),
+	.data (data1),
+	.rdreq (rdreq1a),
+	.wrreq (wrreq1a),
+	.empty (empty1a),
+	.full (full1a),
+	.q (outFIFO1a),
+	.usedw (usedw1a));
+
+fifo1b f1b(
+	.aclr (!reset),
+	.clock (clock),
+	.data (data1),
+	.rdreq (rdreq1b),
+	.wrreq (wrreq1b),
+	.empty (empty1b),
+	.full (full1b),
+	.q (outFIFO1b),
+	.usedw (usedw1b));
+
+muxFIFO mf(
+	//.clock (clock),
+	.sel (selmuxFIFO),
+	.in1A (outFIFO1a),
+	.in1B (outFIFO1b),
+	.outmuxFIFO (outmuxFIFO));
+	
+fifo3Re f3re(
+	.aclr (!reset),
+	.clock (clock),
+	.data (inFIFO3Re),
+	.rdreq (rdreq3),
+	.wrreq (nioswrite),
+	.empty (empty3Re),
+	.full (full3Re),
+	.q (outFIFO3Re),
+	.usedw (usedw3Re));
+
+	
+fifo3Im f3im(
+	.aclr (!reset),
+	.clock (clock),
+	.data (inFIFO3Im),
+	.rdreq (rdreq3),
+	.wrreq (nioswrite),
+	.empty (empty3Im),
+	.full (full3Im),
+	.q (outFIFO3Im),
+	.usedw (usedw3Im));
+		
+muxpreFFT mpFFT(
+	 .selmuxpreFFT (selmuxFFT),
+	 .outmuxFIFO (outmuxFIFO),
+	 .outFIFO3Re ({outFIFO3Re,outFIFO3Im}),
+	 .outmuxpreFFT (outmuxpreFFT));
+/*
+fft2_ser64 fftser(
+	.clka (clock),
+	.rst (!reset),
+	.fft64(fft_enable),
+	.in_re (outmuxpreFFT[31:16]),
+	.in_im (outmuxpreFFT[15:0]),
+	.out_re (outFFT[31:16]),
+	.out_im (outFFT[15:0]));*/
+	assign #64 outFFT = outmuxpreFFT;
+
+/////////////////////////////////////////////////////////////////////////////////
+
+ counter2Re c2Re(
+	.reset (!reset),
+	.clock (clock),
+	.en (niosread2),
+	.clear (rdreq1b), 
+	.q (f642Re));
+	
+
+fifo2Re f2r(
+	.aclr (!reset),
+	.clock (clock),
+	.data (outFFT[31:16]),
+	.rdreq (niosread2),
+	.wrreq (wrreq2),
+	.empty (empty2Re),
+	.usedw (usedw2Re),
+	.full (full2Re),
+	.q (outFIFO2Re));
+
+ fifo2Im f2i(
+	.aclr (!reset),
+	.clock (clock),
+	.data (outFFT[15:0]),
+	.rdreq (niosread2),
+	.wrreq (wrreq2),
+	.empty (empty2Im),
+	.usedw (usedw2Im),
+	.full (full2Im),
+	.q (outFIFO2Im));
+
+demuxFFT dmfft(
+	.outFFT (outFFT),
+	.seldemuxFFT (selmuxFFT),
+	.inFIFO2Re (inFIFO2Re),
+	.outdemuxFFT (outdemuxFFT));
+
+mult256(
+	.in (outdemuxFFT),
+	.out (outmult256));
+
+
+demuxFIFO dmff(
+	.outmult256 (outmult256),
+	.seldemuxFIFO (selmuxFIFO),
+	.inFIFO4A (inFIFO4A),
+	.inFIFO4B (inFIFO4B));
+
+fifo4a ff4a(
+	.aclr (!reset),
+	.clock (clock),
+	.data (inFIFO4a),
+	.rdreq (rdreq4),
+	.wrreq (wrreq4a),
+	.empty (empty4a),
+	.full (full4a),
+	.usedw (usedw4a),
+	.q (outFIFO4a));
+
+fifo4b ff4b(
+	.aclr (!reset),
+	.clock (clock),
+	.data (inFIFO4b),
+	.rdreq (rdreq4),
+	.wrreq (wrreq4b),
+	.empty (empty4b),
+	.full (full4b),
+	.usedw(usedw4b),
+	.q (outFIFO4b));
+
+half_overlap hovlap(
+	.data_a (outFIFO4a),
+	.data_b (outFIFO4b),
+	.data_out(inFIFO5));
+
+fifo5 ff5(
+	.aclr (!reset),
+	.clock (clock),
+	.data (inFIFO5),
+	.rdreq (niosread5),
+	.wrreq (wrreq5),
+	.empty (empty5),
+	.full (full5),
+	.usedw (usedw5),
+	.q (outFIFO5));
+
+cunit cu(
+	.reset (reset),
+	.clock (clock),
+	.start (start),
+	.usedw1a (usedw1a),
+	.usedw1b (usedw1b),
+	.wrreq1b (wrreq1b),
+	.wrreq1a (wrreq1a),
+	.rdreq1a (rdreq1a),
+	.rdreq1b (rdreq1b),
+	.nioswrite (nioswrite),
+	.empty1a (empty1a),
+	.empty1b (empty1b),
+	.empty3Re (empty3Re),
+	.rdreq3 (rdreq3),
+	.selmuxFIFO (selmuxFIFO),
+	.selmuxFFT (selmuxFFT),
+	.wrreq4a (wrreq4a),
+	.wrreq4b (wrreq4b),
+	.wrreq2 (wrreq2),
+	.empty2Re (empty2Re),
+	.fft_enable (fft_enable),
+	.niosread2 (niosread2),
+	.niosread5 (niosread5),
+	.empty5 (empty5),
+	.rdreq4 (rdreq4),
+	.full1a (full1a),
+	.full4a (full4a),
+	.full4b (full4b),
+	.full5 (full5),
+	.full3Re (full3Re),
+	.empty4a (empty4a),
+	.full2Re (full2Re),
+	//.state (state),
+	//.next_state (next_state),
+	.wrreq5 (wrreq5),
+	.f642Re (f642Re),
+	.usedw2Re (usedw2Re),
+	.usedw3Re (usedw3Re));
+	
+endmodule

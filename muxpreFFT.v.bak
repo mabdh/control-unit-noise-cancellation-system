@@ -1,0 +1,12 @@
+module muxpreFFT(selmuxpreFFT,outmuxFIFO,outFIFO3Re,outmuxpreFFT);
+	input selmuxpreFFT;
+	input [31:0]outmuxFIFO;
+	input [15:0]outFIFO3Re;
+	output [31:0]outmuxpreFFT;
+	
+	wire [31:0] outFIFO3Re_con;
+	
+	assign outFIFO3Re_con = {outFIFO3Re,16'b0};
+	assign outmuxpreFFT = (selmuxpreFFT)?outFIFO3Re_con:outmuxFIFO;
+	
+endmodule
